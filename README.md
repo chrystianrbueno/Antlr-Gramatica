@@ -24,10 +24,8 @@ Considere que cada palavra (ou seja, trechos de código) que não fizer parte da
 linguagem, deverá ser identificado e apresentado em que parte do processo de derivação este erro
 foi encontrado. Portanto, deverá será realizada a análise sintática e semântica.
 Exemplo de um trecho de código:
-b := 4 /(2+3);
-a := b + c * 1;
-if a=1 then
-if b=0 then
-a:=0;
-else b:=1;
+
+![image](https://user-images.githubusercontent.com/73067604/139755084-72319af5-17a8-4074-ae63-9fee174cc111.png)
+
+
 A gramática deverá ser desenvolvida utilizando a ferramenta ANTLR.
