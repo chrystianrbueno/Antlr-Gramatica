@@ -8,8 +8,12 @@ prog:
 	stat+
 	;
 stat	:	
-	(resultado';')
-	;	 
+	(comando';')
+	;	
+	
+comando	:	
+	VAR ':=' resultado {System.out.println("Variável " + $VAR.text + " = " + $resultado.v);}
+	; 
 resultado returns [ double v ]:
 
 	(e = expr {$v = $e.v;} {System.out.println("Resultado: " + $v);})+ 
@@ -24,3 +28,4 @@ expr returns [ double v ]:
     ;
 NEWLINE : ('\r' | '\n')+ {skip();};
 INT     : ('0'..'9')+ ;
+VAR  : ('a'..'z')+ ;
