@@ -4,6 +4,14 @@ options {
 	language=Java;
 }
 
+@header {
+    import java.util.HashMap;
+}
+
+@members {
+    HashMap<String, Double> memory = new HashMap<>();
+}
+
 prog:
 	stat+
 	;
@@ -13,7 +21,9 @@ stat	:
 	;	
 	
 comando	:	
-	VAR ':=' expr {System.out.println("Variável " + $VAR.text + " = " + $expr.v);}
+	VAR ':=' expr 
+	{ memory.put($VAR.text, new Double($expr.v)); } 
+	{ System.out.println("Variável " + $VAR.text + " = " + $expr.v + " inserida na lista"); }
 	; 
 
 teste
@@ -50,6 +60,6 @@ expr_rel returns [ boolean t ]
     )   
     ;
     
-NEWLINE : ('\r' | '\n')+ {skip();};
+WS : (' ' | '\t' | '\r' | '\n')+ {skip();};
 INT     : ('0'..'9')+ ;
 VAR  : ('a'..'z')+ ;

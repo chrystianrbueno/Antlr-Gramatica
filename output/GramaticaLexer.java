@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/Gramatica.g 2021-11-14 17:10:27
+// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/Gramatica.g 2021-11-14 17:19:31
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -418,16 +418,16 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = NEWLINE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:53:9: ( ( '\\r' | '\\n' )+ )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:53:11: ( '\\r' | '\\n' )+
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:63:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:63:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			{
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:53:11: ( '\\r' | '\\n' )+
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:63:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
 				int alt1=2;
 				int LA1_0 = input.LA(1);
-				if ( (LA1_0=='\n'||LA1_0=='\r') ) {
+				if ( ((LA1_0 >= '\t' && LA1_0 <= '\n')||LA1_0=='\r'||LA1_0==' ') ) {
 					alt1=1;
 				}
 
@@ -435,7 +435,7 @@ public class GramaticaLexer extends Lexer {
 				case 1 :
 					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:
 					{
-					if ( input.LA(1)=='\n'||input.LA(1)=='\r' ) {
+					if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 						input.consume();
 					}
 					else {
@@ -471,10 +471,10 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:54:9: ( ( '0' .. '9' )+ )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:54:11: ( '0' .. '9' )+
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:64:9: ( ( '0' .. '9' )+ )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:64:11: ( '0' .. '9' )+
 			{
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:54:11: ( '0' .. '9' )+
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:64:11: ( '0' .. '9' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -523,10 +523,10 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = VAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:55:6: ( ( 'a' .. 'z' )+ )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:55:8: ( 'a' .. 'z' )+
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:65:6: ( ( 'a' .. 'z' )+ )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:65:8: ( 'a' .. 'z' )+
 			{
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:55:8: ( 'a' .. 'z' )+
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:65:8: ( 'a' .. 'z' )+
 			int cnt3=0;
 			loop3:
 			while (true) {
@@ -775,8 +775,10 @@ public class GramaticaLexer extends Lexer {
 
 			}
 			break;
+		case '\t':
 		case '\n':
 		case '\r':
+		case ' ':
 			{
 			alt4=19;
 			}

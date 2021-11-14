@@ -1,4 +1,7 @@
-// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/Gramatica.g 2021-11-14 17:10:27
+// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/Gramatica.g 2021-11-14 17:19:31
+
+    import java.util.HashMap;
+
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -46,7 +49,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	public static final String[] ruleNames = new String[] {
-		"invalidRule", "stat", "expr", "iteracao", "comando", "expr_rel", "teste", 
+		"invalidRule", "teste", "expr", "comando", "expr_rel", "stat", "iteracao", 
 		"prog"
 	};
 
@@ -90,23 +93,26 @@ public class GramaticaParser extends DebugParser {
 	@Override public String getGrammarFileName() { return "/home/chrystian/Downloads/TrabalhoGB/Gramatica.g"; }
 
 
+	    HashMap<String, Double> memory = new HashMap<>();
+
+
 
 	// $ANTLR start "prog"
-	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:7:1: prog : ( stat )+ ;
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:15:1: prog : ( stat )+ ;
 	public final void prog() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "prog");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(7, 0);
+		dbg.location(15, 0);
 
 		try {
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:7:5: ( ( stat )+ )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:15:5: ( ( stat )+ )
 			dbg.enterAlt(1);
 
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:8:2: ( stat )+
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:16:2: ( stat )+
 			{
-			dbg.location(8,2);
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:8:2: ( stat )+
+			dbg.location(16,2);
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:16:2: ( stat )+
 			int cnt1=0;
 			try { dbg.enterSubRule(1);
 
@@ -126,10 +132,10 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:8:2: stat
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:16:2: stat
 					{
-					dbg.location(8,2);
-					pushFollow(FOLLOW_stat_in_prog23);
+					dbg.location(16,2);
+					pushFollow(FOLLOW_stat_in_prog35);
 					stat();
 					state._fsp--;
 
@@ -157,7 +163,7 @@ public class GramaticaParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(9, 1);
+		dbg.location(17, 1);
 
 		}
 		finally {
@@ -172,15 +178,15 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "stat"
-	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:10:1: stat : ( ( comando ';' ) | teste );
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:18:1: stat : ( ( comando ';' ) | teste );
 	public final void stat() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "stat");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(10, 0);
+		dbg.location(18, 0);
 
 		try {
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:10:6: ( ( comando ';' ) | teste )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:18:6: ( ( comando ';' ) | teste )
 			int alt2=2;
 			try { dbg.enterDecision(2, decisionCanBacktrack[2]);
 
@@ -205,20 +211,20 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:11:2: ( comando ';' )
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:19:2: ( comando ';' )
 					{
-					dbg.location(11,2);
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:11:2: ( comando ';' )
+					dbg.location(19,2);
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:19:2: ( comando ';' )
 					dbg.enterAlt(1);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:11:3: comando ';'
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:19:3: comando ';'
 					{
-					dbg.location(11,3);
-					pushFollow(FOLLOW_comando_in_stat36);
+					dbg.location(19,3);
+					pushFollow(FOLLOW_comando_in_stat48);
 					comando();
 					state._fsp--;
-					dbg.location(11,10);
-					match(input,14,FOLLOW_14_in_stat37); 
+					dbg.location(19,10);
+					match(input,14,FOLLOW_14_in_stat49); 
 					}
 
 					}
@@ -226,10 +232,10 @@ public class GramaticaParser extends DebugParser {
 				case 2 :
 					dbg.enterAlt(2);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:12:4: teste
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:20:4: teste
 					{
-					dbg.location(12,4);
-					pushFollow(FOLLOW_teste_in_stat43);
+					dbg.location(20,4);
+					pushFollow(FOLLOW_teste_in_stat55);
 					teste();
 					state._fsp--;
 
@@ -245,7 +251,7 @@ public class GramaticaParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(13, 1);
+		dbg.location(21, 1);
 
 		}
 		finally {
@@ -260,7 +266,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "comando"
-	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:15:1: comando : VAR ':=' expr ;
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:23:1: comando : VAR ':=' expr ;
 	public final void comando() throws RecognitionException {
 		Token VAR1=null;
 		double expr2 =0.0;
@@ -268,136 +274,23 @@ public class GramaticaParser extends DebugParser {
 		try { dbg.enterRule(getGrammarFileName(), "comando");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(15, 0);
+		dbg.location(23, 0);
 
 		try {
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:15:9: ( VAR ':=' expr )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:23:9: ( VAR ':=' expr )
 			dbg.enterAlt(1);
 
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:16:2: VAR ':=' expr
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:24:2: VAR ':=' expr
 			{
-			dbg.location(16,2);
-			VAR1=(Token)match(input,VAR,FOLLOW_VAR_in_comando57); dbg.location(16,6);
-			match(input,13,FOLLOW_13_in_comando59); dbg.location(16,11);
-			pushFollow(FOLLOW_expr_in_comando61);
+			dbg.location(24,2);
+			VAR1=(Token)match(input,VAR,FOLLOW_VAR_in_comando69); dbg.location(24,6);
+			match(input,13,FOLLOW_13_in_comando71); dbg.location(24,11);
+			pushFollow(FOLLOW_expr_in_comando73);
 			expr2=expr();
 			state._fsp--;
-			dbg.location(16,16);
-			System.out.println("Variável " + (VAR1!=null?VAR1.getText():null) + " = " + expr2);
-			}
-
-		}
-		catch (RecognitionException re) {
-			reportError(re);
-			recover(input,re);
-		}
-		finally {
-			// do for sure before leaving
-		}
-		dbg.location(17, 1);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "comando");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
-	}
-	// $ANTLR end "comando"
-
-
-
-	// $ANTLR start "teste"
-	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:19:1: teste : ( 'if' expr_rel 'then' stat ) ;
-	public final void teste() throws RecognitionException {
-		try { dbg.enterRule(getGrammarFileName(), "teste");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(19, 0);
-
-		try {
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:20:2: ( ( 'if' expr_rel 'then' stat ) )
-			dbg.enterAlt(1);
-
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:21:2: ( 'if' expr_rel 'then' stat )
-			{
-			dbg.location(21,2);
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:21:2: ( 'if' expr_rel 'then' stat )
-			dbg.enterAlt(1);
-
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:21:3: 'if' expr_rel 'then' stat
-			{
-			dbg.location(21,3);
-			match(input,22,FOLLOW_22_in_teste77); dbg.location(21,8);
-			pushFollow(FOLLOW_expr_rel_in_teste79);
-			expr_rel();
-			state._fsp--;
-			dbg.location(21,17);
-			match(input,23,FOLLOW_23_in_teste81); dbg.location(21,24);
-			pushFollow(FOLLOW_stat_in_teste83);
-			stat();
-			state._fsp--;
-
-			}
-
-			}
-
-		}
-		catch (RecognitionException re) {
-			reportError(re);
-			recover(input,re);
-		}
-		finally {
-			// do for sure before leaving
-		}
-		dbg.location(22, 1);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "teste");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
-	}
-	// $ANTLR end "teste"
-
-
-
-	// $ANTLR start "iteracao"
-	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:24:1: iteracao : ( 'while' expr_rel 'do' stat ) ;
-	public final void iteracao() throws RecognitionException {
-		try { dbg.enterRule(getGrammarFileName(), "iteracao");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(24, 0);
-
-		try {
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:25:2: ( ( 'while' expr_rel 'do' stat ) )
-			dbg.enterAlt(1);
-
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:26:2: ( 'while' expr_rel 'do' stat )
-			{
-			dbg.location(26,2);
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:26:2: ( 'while' expr_rel 'do' stat )
-			dbg.enterAlt(1);
-
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:26:3: 'while' expr_rel 'do' stat
-			{
-			dbg.location(26,3);
-			match(input,24,FOLLOW_24_in_iteracao97); dbg.location(26,11);
-			pushFollow(FOLLOW_expr_rel_in_iteracao99);
-			expr_rel();
-			state._fsp--;
-			dbg.location(26,20);
-			match(input,21,FOLLOW_21_in_iteracao101); dbg.location(26,25);
-			pushFollow(FOLLOW_stat_in_iteracao103);
-			stat();
-			state._fsp--;
-
-			}
-
+			dbg.location(25,2);
+			 memory.put((VAR1!=null?VAR1.getText():null), new Double(expr2)); dbg.location(26,2);
+			 System.out.println("Variável " + (VAR1!=null?VAR1.getText():null) + " = " + expr2 + " inserida na lista"); 
 			}
 
 		}
@@ -412,6 +305,120 @@ public class GramaticaParser extends DebugParser {
 
 		}
 		finally {
+			dbg.exitRule(getGrammarFileName(), "comando");
+			decRuleLevel();
+			if ( getRuleLevel()==0 ) {dbg.terminate();}
+		}
+
+	}
+	// $ANTLR end "comando"
+
+
+
+	// $ANTLR start "teste"
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:29:1: teste : ( 'if' expr_rel 'then' stat ) ;
+	public final void teste() throws RecognitionException {
+		try { dbg.enterRule(getGrammarFileName(), "teste");
+		if ( getRuleLevel()==0 ) {dbg.commence();}
+		incRuleLevel();
+		dbg.location(29, 0);
+
+		try {
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:30:2: ( ( 'if' expr_rel 'then' stat ) )
+			dbg.enterAlt(1);
+
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:31:2: ( 'if' expr_rel 'then' stat )
+			{
+			dbg.location(31,2);
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:31:2: ( 'if' expr_rel 'then' stat )
+			dbg.enterAlt(1);
+
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:31:3: 'if' expr_rel 'then' stat
+			{
+			dbg.location(31,3);
+			match(input,22,FOLLOW_22_in_teste95); dbg.location(31,8);
+			pushFollow(FOLLOW_expr_rel_in_teste97);
+			expr_rel();
+			state._fsp--;
+			dbg.location(31,17);
+			match(input,23,FOLLOW_23_in_teste99); dbg.location(31,24);
+			pushFollow(FOLLOW_stat_in_teste101);
+			stat();
+			state._fsp--;
+
+			}
+
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		dbg.location(32, 1);
+
+		}
+		finally {
+			dbg.exitRule(getGrammarFileName(), "teste");
+			decRuleLevel();
+			if ( getRuleLevel()==0 ) {dbg.terminate();}
+		}
+
+	}
+	// $ANTLR end "teste"
+
+
+
+	// $ANTLR start "iteracao"
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:34:1: iteracao : ( 'while' expr_rel 'do' stat ) ;
+	public final void iteracao() throws RecognitionException {
+		try { dbg.enterRule(getGrammarFileName(), "iteracao");
+		if ( getRuleLevel()==0 ) {dbg.commence();}
+		incRuleLevel();
+		dbg.location(34, 0);
+
+		try {
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:35:2: ( ( 'while' expr_rel 'do' stat ) )
+			dbg.enterAlt(1);
+
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:36:2: ( 'while' expr_rel 'do' stat )
+			{
+			dbg.location(36,2);
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:36:2: ( 'while' expr_rel 'do' stat )
+			dbg.enterAlt(1);
+
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:36:3: 'while' expr_rel 'do' stat
+			{
+			dbg.location(36,3);
+			match(input,24,FOLLOW_24_in_iteracao115); dbg.location(36,11);
+			pushFollow(FOLLOW_expr_rel_in_iteracao117);
+			expr_rel();
+			state._fsp--;
+			dbg.location(36,20);
+			match(input,21,FOLLOW_21_in_iteracao119); dbg.location(36,25);
+			pushFollow(FOLLOW_stat_in_iteracao121);
+			stat();
+			state._fsp--;
+
+			}
+
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		dbg.location(37, 1);
+
+		}
+		finally {
 			dbg.exitRule(getGrammarFileName(), "iteracao");
 			decRuleLevel();
 			if ( getRuleLevel()==0 ) {dbg.terminate();}
@@ -423,7 +430,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "expr"
-	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:29:1: expr returns [ double v ] : ( INT ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr ) | INT | '(' e= expr ')' );
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:39:1: expr returns [ double v ] : ( INT ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr ) | INT | '(' e= expr ')' );
 	public final double expr() throws RecognitionException {
 		double v = 0.0;
 
@@ -435,10 +442,10 @@ public class GramaticaParser extends DebugParser {
 		try { dbg.enterRule(getGrammarFileName(), "expr");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(29, 0);
+		dbg.location(39, 0);
 
 		try {
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:29:26: ( INT ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr ) | INT | '(' e= expr ')' )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:39:26: ( INT ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr ) | INT | '(' e= expr ')' )
 			int alt4=3;
 			try { dbg.enterDecision(4, decisionCanBacktrack[4]);
 
@@ -483,12 +490,12 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:30:2: INT ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr )
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:40:2: INT ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr )
 					{
-					dbg.location(30,2);
-					INT3=(Token)match(input,INT,FOLLOW_INT_in_expr283); dbg.location(30,6);
-					v = Double.parseDouble( (INT3!=null?INT3.getText():null));dbg.location(31,2);
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:31:2: ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr )
+					dbg.location(40,2);
+					INT3=(Token)match(input,INT,FOLLOW_INT_in_expr301); dbg.location(40,6);
+					v = Double.parseDouble( (INT3!=null?INT3.getText():null));dbg.location(41,2);
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:41:2: ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr )
 					int alt3=4;
 					try { dbg.enterSubRule(3);
 					try { dbg.enterDecision(3, decisionCanBacktrack[3]);
@@ -526,60 +533,60 @@ public class GramaticaParser extends DebugParser {
 						case 1 :
 							dbg.enterAlt(1);
 
-							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:32:4: '-' e= expr
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:42:4: '-' e= expr
 							{
-							dbg.location(32,4);
-							match(input,11,FOLLOW_11_in_expr293); dbg.location(32,10);
-							pushFollow(FOLLOW_expr_in_expr299);
+							dbg.location(42,4);
+							match(input,11,FOLLOW_11_in_expr311); dbg.location(42,10);
+							pushFollow(FOLLOW_expr_in_expr317);
 							e=expr();
 							state._fsp--;
-							dbg.location(32,17);
-							v -= e;dbg.location(32,31);
+							dbg.location(42,17);
+							v -= e;dbg.location(42,31);
 							System.out.println("Resultado Subtração: " + v);
 							}
 							break;
 						case 2 :
 							dbg.enterAlt(2);
 
-							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:33:4: '+' e= expr
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:43:4: '+' e= expr
 							{
-							dbg.location(33,4);
-							match(input,10,FOLLOW_10_in_expr308); dbg.location(33,10);
-							pushFollow(FOLLOW_expr_in_expr314);
+							dbg.location(43,4);
+							match(input,10,FOLLOW_10_in_expr326); dbg.location(43,10);
+							pushFollow(FOLLOW_expr_in_expr332);
 							e=expr();
 							state._fsp--;
-							dbg.location(33,17);
-							v += e;dbg.location(33,31);
+							dbg.location(43,17);
+							v += e;dbg.location(43,31);
 							System.out.println("Resultado Soma: " + v);
 							}
 							break;
 						case 3 :
 							dbg.enterAlt(3);
 
-							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:34:4: '/' e= expr
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:44:4: '/' e= expr
 							{
-							dbg.location(34,4);
-							match(input,12,FOLLOW_12_in_expr323); dbg.location(34,10);
-							pushFollow(FOLLOW_expr_in_expr329);
+							dbg.location(44,4);
+							match(input,12,FOLLOW_12_in_expr341); dbg.location(44,10);
+							pushFollow(FOLLOW_expr_in_expr347);
 							e=expr();
 							state._fsp--;
-							dbg.location(34,17);
-							v /= e;dbg.location(34,31);
+							dbg.location(44,17);
+							v /= e;dbg.location(44,31);
 							System.out.println("Resultado Divisão: " + v);
 							}
 							break;
 						case 4 :
 							dbg.enterAlt(4);
 
-							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:35:4: '*' e= expr
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:45:4: '*' e= expr
 							{
-							dbg.location(35,4);
-							match(input,9,FOLLOW_9_in_expr338); dbg.location(35,10);
-							pushFollow(FOLLOW_expr_in_expr344);
+							dbg.location(45,4);
+							match(input,9,FOLLOW_9_in_expr356); dbg.location(45,10);
+							pushFollow(FOLLOW_expr_in_expr362);
 							e=expr();
 							state._fsp--;
-							dbg.location(35,17);
-							v *= e;dbg.location(35,31);
+							dbg.location(45,17);
+							v *= e;dbg.location(45,31);
 							System.out.println("Resultado Multiplicação: " + v);
 							}
 							break;
@@ -592,26 +599,26 @@ public class GramaticaParser extends DebugParser {
 				case 2 :
 					dbg.enterAlt(2);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:37:6: INT
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:47:6: INT
 					{
-					dbg.location(37,6);
-					INT4=(Token)match(input,INT,FOLLOW_INT_in_expr359); dbg.location(37,10);
+					dbg.location(47,6);
+					INT4=(Token)match(input,INT,FOLLOW_INT_in_expr377); dbg.location(47,10);
 					v = Double.parseDouble( (INT4!=null?INT4.getText():null));
 					}
 					break;
 				case 3 :
 					dbg.enterAlt(3);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:38:6: '(' e= expr ')'
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:48:6: '(' e= expr ')'
 					{
-					dbg.location(38,6);
-					match(input,7,FOLLOW_7_in_expr368); dbg.location(38,12);
-					pushFollow(FOLLOW_expr_in_expr374);
+					dbg.location(48,6);
+					match(input,7,FOLLOW_7_in_expr386); dbg.location(48,12);
+					pushFollow(FOLLOW_expr_in_expr392);
 					e=expr();
 					state._fsp--;
-					dbg.location(38,19);
-					v = e;dbg.location(38,32);
-					match(input,8,FOLLOW_8_in_expr378); 
+					dbg.location(48,19);
+					v = e;dbg.location(48,32);
+					match(input,8,FOLLOW_8_in_expr396); 
 					}
 					break;
 
@@ -624,7 +631,7 @@ public class GramaticaParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(39, 4);
+		dbg.location(49, 4);
 
 		}
 		finally {
@@ -640,7 +647,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "expr_rel"
-	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:41:1: expr_rel returns [ boolean t ] : (e= expr ) ( '=' d= expr | '<' d= expr | '>' d= expr | '>=' d= expr | '<=' d= expr | '<>' d= expr ) ;
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:51:1: expr_rel returns [ boolean t ] : (e= expr ) ( '=' d= expr | '<' d= expr | '>' d= expr | '>=' d= expr | '<=' d= expr | '<>' d= expr ) ;
 	public final boolean expr_rel() throws RecognitionException {
 		boolean t = false;
 
@@ -651,28 +658,28 @@ public class GramaticaParser extends DebugParser {
 		try { dbg.enterRule(getGrammarFileName(), "expr_rel");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(41, 0);
+		dbg.location(51, 0);
 
 		try {
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:42:5: ( (e= expr ) ( '=' d= expr | '<' d= expr | '>' d= expr | '>=' d= expr | '<=' d= expr | '<>' d= expr ) )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:52:5: ( (e= expr ) ( '=' d= expr | '<' d= expr | '>' d= expr | '>=' d= expr | '<=' d= expr | '<>' d= expr ) )
 			dbg.enterAlt(1);
 
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:43:5: (e= expr ) ( '=' d= expr | '<' d= expr | '>' d= expr | '>=' d= expr | '<=' d= expr | '<>' d= expr )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:53:5: (e= expr ) ( '=' d= expr | '<' d= expr | '>' d= expr | '>=' d= expr | '<=' d= expr | '<>' d= expr )
 			{
-			dbg.location(43,5);
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:43:5: (e= expr )
+			dbg.location(53,5);
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:53:5: (e= expr )
 			dbg.enterAlt(1);
 
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:43:7: e= expr
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:53:7: e= expr
 			{
-			dbg.location(43,9);
-			pushFollow(FOLLOW_expr_in_expr_rel410);
+			dbg.location(53,9);
+			pushFollow(FOLLOW_expr_in_expr_rel428);
 			e=expr();
 			state._fsp--;
 
 			}
-			dbg.location(44,5);
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:44:5: ( '=' d= expr | '<' d= expr | '>' d= expr | '>=' d= expr | '<=' d= expr | '<>' d= expr )
+			dbg.location(54,5);
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:54:5: ( '=' d= expr | '<' d= expr | '>' d= expr | '>=' d= expr | '<=' d= expr | '<>' d= expr )
 			int alt5=6;
 			try { dbg.enterSubRule(5);
 			try { dbg.enterDecision(5, decisionCanBacktrack[5]);
@@ -720,96 +727,96 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:44:7: '=' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:54:7: '=' d= expr
 					{
-					dbg.location(44,7);
-					match(input,18,FOLLOW_18_in_expr_rel421); dbg.location(44,12);
-					System.out.println("Expressao Relacional: = " );dbg.location(44,65);
-					pushFollow(FOLLOW_expr_in_expr_rel430);
+					dbg.location(54,7);
+					match(input,18,FOLLOW_18_in_expr_rel439); dbg.location(54,12);
+					System.out.println("Expressao Relacional: = " );dbg.location(54,65);
+					pushFollow(FOLLOW_expr_in_expr_rel448);
 					d=expr();
 					state._fsp--;
-					dbg.location(44,72);
-					t = e == d;dbg.location(44,93);
+					dbg.location(54,72);
+					t = e == d;dbg.location(54,93);
 					System.out.println("Resultado Expressao Relacional: " + e + " = "  + d + " : " + t);
 					}
 					break;
 				case 2 :
 					dbg.enterAlt(2);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:45:7: '<' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:55:7: '<' d= expr
 					{
-					dbg.location(45,7);
-					match(input,15,FOLLOW_15_in_expr_rel443); dbg.location(45,12);
-					System.out.println("Expressao Relacional: < " );dbg.location(45,65);
-					pushFollow(FOLLOW_expr_in_expr_rel452);
+					dbg.location(55,7);
+					match(input,15,FOLLOW_15_in_expr_rel461); dbg.location(55,12);
+					System.out.println("Expressao Relacional: < " );dbg.location(55,65);
+					pushFollow(FOLLOW_expr_in_expr_rel470);
 					d=expr();
 					state._fsp--;
-					dbg.location(45,72);
-					t = e <  d;dbg.location(45,93);
+					dbg.location(55,72);
+					t = e <  d;dbg.location(55,93);
 					System.out.println("Resultado Expressao Relacional: " + e + " < "  + d + " : " + t);
 					}
 					break;
 				case 3 :
 					dbg.enterAlt(3);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:46:7: '>' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:56:7: '>' d= expr
 					{
-					dbg.location(46,7);
-					match(input,19,FOLLOW_19_in_expr_rel464); dbg.location(46,12);
-					System.out.println("Expressao Relacional: > " );dbg.location(46,65);
-					pushFollow(FOLLOW_expr_in_expr_rel473);
+					dbg.location(56,7);
+					match(input,19,FOLLOW_19_in_expr_rel482); dbg.location(56,12);
+					System.out.println("Expressao Relacional: > " );dbg.location(56,65);
+					pushFollow(FOLLOW_expr_in_expr_rel491);
 					d=expr();
 					state._fsp--;
-					dbg.location(46,72);
-					t = e >  d;dbg.location(46,93);
+					dbg.location(56,72);
+					t = e >  d;dbg.location(56,93);
 					System.out.println("Resultado Expressao Relacional: " + e + " > "  + d + " : " + t);
 					}
 					break;
 				case 4 :
 					dbg.enterAlt(4);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:47:7: '>=' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:57:7: '>=' d= expr
 					{
-					dbg.location(47,7);
-					match(input,20,FOLLOW_20_in_expr_rel486); dbg.location(47,12);
-					System.out.println("Expressao Relacional: >= ");dbg.location(47,65);
-					pushFollow(FOLLOW_expr_in_expr_rel494);
+					dbg.location(57,7);
+					match(input,20,FOLLOW_20_in_expr_rel504); dbg.location(57,12);
+					System.out.println("Expressao Relacional: >= ");dbg.location(57,65);
+					pushFollow(FOLLOW_expr_in_expr_rel512);
 					d=expr();
 					state._fsp--;
-					dbg.location(47,72);
-					t = e >= d;dbg.location(47,93);
+					dbg.location(57,72);
+					t = e >= d;dbg.location(57,93);
 					System.out.println("Resultado Expressao Relacional: " + e + " >= " + d + " : " + t);
 					}
 					break;
 				case 5 :
 					dbg.enterAlt(5);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:48:7: '<=' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:58:7: '<=' d= expr
 					{
-					dbg.location(48,7);
-					match(input,16,FOLLOW_16_in_expr_rel506); dbg.location(48,12);
-					System.out.println("Expressao Relacional: <= ");dbg.location(48,65);
-					pushFollow(FOLLOW_expr_in_expr_rel514);
+					dbg.location(58,7);
+					match(input,16,FOLLOW_16_in_expr_rel524); dbg.location(58,12);
+					System.out.println("Expressao Relacional: <= ");dbg.location(58,65);
+					pushFollow(FOLLOW_expr_in_expr_rel532);
 					d=expr();
 					state._fsp--;
-					dbg.location(48,72);
-					t = e <= d;dbg.location(48,93);
+					dbg.location(58,72);
+					t = e <= d;dbg.location(58,93);
 					System.out.println("Resultado Expressao Relacional: " + e + " <= " + d + " : " + t);
 					}
 					break;
 				case 6 :
 					dbg.enterAlt(6);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:49:7: '<>' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:59:7: '<>' d= expr
 					{
-					dbg.location(49,7);
-					match(input,17,FOLLOW_17_in_expr_rel526); dbg.location(49,12);
-					System.out.println("Expressao Relacional: <> ");dbg.location(49,65);
-					pushFollow(FOLLOW_expr_in_expr_rel534);
+					dbg.location(59,7);
+					match(input,17,FOLLOW_17_in_expr_rel544); dbg.location(59,12);
+					System.out.println("Expressao Relacional: <> ");dbg.location(59,65);
+					pushFollow(FOLLOW_expr_in_expr_rel552);
 					d=expr();
 					state._fsp--;
-					dbg.location(49,72);
-					t = e != d;dbg.location(49,93);
+					dbg.location(59,72);
+					t = e != d;dbg.location(59,93);
 					System.out.println("Resultado Expressao Relacional: " + e + " <> " + d + " : " + t);
 					}
 					break;
@@ -827,7 +834,7 @@ public class GramaticaParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(51, 4);
+		dbg.location(61, 4);
 
 		}
 		finally {
@@ -844,45 +851,45 @@ public class GramaticaParser extends DebugParser {
 
 
 
-	public static final BitSet FOLLOW_stat_in_prog23 = new BitSet(new long[]{0x0000000000400042L});
-	public static final BitSet FOLLOW_comando_in_stat36 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_14_in_stat37 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_teste_in_stat43 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_VAR_in_comando57 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_13_in_comando59 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_comando61 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_22_in_teste77 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_rel_in_teste79 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_23_in_teste81 = new BitSet(new long[]{0x0000000000400040L});
-	public static final BitSet FOLLOW_stat_in_teste83 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_24_in_iteracao97 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_rel_in_iteracao99 = new BitSet(new long[]{0x0000000000200000L});
-	public static final BitSet FOLLOW_21_in_iteracao101 = new BitSet(new long[]{0x0000000000400040L});
-	public static final BitSet FOLLOW_stat_in_iteracao103 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INT_in_expr283 = new BitSet(new long[]{0x0000000000001E00L});
-	public static final BitSet FOLLOW_11_in_expr293 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_expr299 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_10_in_expr308 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_expr314 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_12_in_expr323 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_expr329 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_9_in_expr338 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_expr344 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INT_in_expr359 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_7_in_expr368 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_expr374 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_8_in_expr378 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expr_in_expr_rel410 = new BitSet(new long[]{0x00000000001F8000L});
-	public static final BitSet FOLLOW_18_in_expr_rel421 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_expr_rel430 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_15_in_expr_rel443 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_expr_rel452 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_19_in_expr_rel464 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_expr_rel473 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_20_in_expr_rel486 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_expr_rel494 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_16_in_expr_rel506 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_expr_rel514 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_17_in_expr_rel526 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_expr_rel534 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_stat_in_prog35 = new BitSet(new long[]{0x0000000000400042L});
+	public static final BitSet FOLLOW_comando_in_stat48 = new BitSet(new long[]{0x0000000000004000L});
+	public static final BitSet FOLLOW_14_in_stat49 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_teste_in_stat55 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_VAR_in_comando69 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_13_in_comando71 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_comando73 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_22_in_teste95 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_rel_in_teste97 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_23_in_teste99 = new BitSet(new long[]{0x0000000000400040L});
+	public static final BitSet FOLLOW_stat_in_teste101 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_24_in_iteracao115 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_rel_in_iteracao117 = new BitSet(new long[]{0x0000000000200000L});
+	public static final BitSet FOLLOW_21_in_iteracao119 = new BitSet(new long[]{0x0000000000400040L});
+	public static final BitSet FOLLOW_stat_in_iteracao121 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INT_in_expr301 = new BitSet(new long[]{0x0000000000001E00L});
+	public static final BitSet FOLLOW_11_in_expr311 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_expr317 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_10_in_expr326 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_expr332 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_12_in_expr341 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_expr347 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_9_in_expr356 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_expr362 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INT_in_expr377 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_7_in_expr386 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_expr392 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_8_in_expr396 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expr_in_expr_rel428 = new BitSet(new long[]{0x00000000001F8000L});
+	public static final BitSet FOLLOW_18_in_expr_rel439 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_expr_rel448 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_15_in_expr_rel461 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_expr_rel470 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_19_in_expr_rel482 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_expr_rel491 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_20_in_expr_rel504 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_expr_rel512 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_16_in_expr_rel524 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_expr_rel532 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_17_in_expr_rel544 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_expr_rel552 = new BitSet(new long[]{0x0000000000000002L});
 }
