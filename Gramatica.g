@@ -13,7 +13,7 @@ stat	:
 	;	
 	
 comando	:	
-	VAR ':=' expr_arit {System.out.println("Variável " + $VAR.text + " = " + $expr.v);}
+	VAR ':=' expr {System.out.println("Variável " + $VAR.text + " = " + $expr.v);}
 	; 
 
 teste
@@ -26,27 +26,27 @@ iteracao
 	('while' expr_rel 'do' stat)
 	;
 																																																																																																																																																																					
-expr_arit returns [ double v ]:
+expr returns [ double v ]:
 	INT {$v = Double.parseDouble( $INT.text);}
 	(
-	  '-' e = expr_arit {$v -= $e.v;} {System.out.println("Resultado Subtração: " + $v);}
-	| '+' e = expr_arit {$v += $e.v;} {System.out.println("Resultado Soma: " + $v);}
-	| '/' e = expr_arit {$v /= $e.v;} {System.out.println("Resultado Divisão: " + $v);}
-	| '*' e = expr_arit {$v *= $e.v;} {System.out.println("Resultado Multiplicação: " + $v);}
+	  '-' e = expr {$v -= $e.v;} {System.out.println("Resultado Subtração: " + $v);}
+	| '+' e = expr {$v += $e.v;} {System.out.println("Resultado Soma: " + $v);}
+	| '/' e = expr {$v /= $e.v;} {System.out.println("Resultado Divisão: " + $v);}
+	| '*' e = expr {$v *= $e.v;} {System.out.println("Resultado Multiplicação: " + $v);}
 	)	
     |INT {$v = Double.parseDouble( $INT.text);}
-    |'(' e = expr_arit {$v = $e.v;} ')'
+    |'(' e = expr {$v = $e.v;} ')'
     ;
 
 expr_rel returns [ boolean t ]
     : 
-    ( e = expr_rel ) 
-    ( '='  {System.out.println("Expressao Relacional: = " );} d = expr_rel {$t = $e.v == $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " = "  + $d.v + " : " + $t);} 
-    | '<'  {System.out.println("Expressao Relacional: < " );} d = expr_rel {$t = $e.v <  $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " < "  + $d.v + " : " + $t);}
-    | '>'  {System.out.println("Expressao Relacional: > " );} d = expr_rel {$t = $e.v >  $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " > "  + $d.v + " : " + $t);} 
-    | '>=' {System.out.println("Expressao Relacional: >= ");} d = expr_rel {$t = $e.v >= $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " >= " + $d.v + " : " + $t);}
-    | '<=' {System.out.println("Expressao Relacional: <= ");} d = expr_rel {$t = $e.v <= $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " <= " + $d.v + " : " + $t);}
-    | '<>' {System.out.println("Expressao Relacional: <> ");} d = expr_rel {$t = $e.v != $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " <> " + $d.v + " : " + $t);} 
+    ( e = expr ) 
+    ( '='  {System.out.println("Expressao Relacional: = " );} d = expr {$t = $e.v == $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " = "  + $d.v + " : " + $t);} 
+    | '<'  {System.out.println("Expressao Relacional: < " );} d = expr {$t = $e.v <  $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " < "  + $d.v + " : " + $t);}
+    | '>'  {System.out.println("Expressao Relacional: > " );} d = expr {$t = $e.v >  $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " > "  + $d.v + " : " + $t);} 
+    | '>=' {System.out.println("Expressao Relacional: >= ");} d = expr {$t = $e.v >= $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " >= " + $d.v + " : " + $t);}
+    | '<=' {System.out.println("Expressao Relacional: <= ");} d = expr {$t = $e.v <= $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " <= " + $d.v + " : " + $t);}
+    | '<>' {System.out.println("Expressao Relacional: <> ");} d = expr {$t = $e.v != $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " <> " + $d.v + " : " + $t);} 
     )   
     ;
     
