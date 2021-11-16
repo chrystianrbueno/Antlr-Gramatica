@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g 2021-11-16 16:41:39
+// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g 2021-11-16 17:02:06
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -418,10 +418,10 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:71:3: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:71:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:77:3: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:77:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			{
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:71:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:77:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -471,10 +471,10 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:72:4: ( ( '0' .. '9' )+ )
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:72:6: ( '0' .. '9' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:78:4: ( ( '0' .. '9' )+ )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:78:6: ( '0' .. '9' )+
 			{
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:72:6: ( '0' .. '9' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:78:6: ( '0' .. '9' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -523,10 +523,10 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = VAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:73:4: ( ( 'a' .. 'z' )+ )
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:73:6: ( 'a' .. 'z' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:79:4: ( ( 'a' .. 'z' )+ )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:79:6: ( 'a' .. 'z' )+
 			{
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:73:6: ( 'a' .. 'z' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:79:6: ( 'a' .. 'z' )+
 			int cnt3=0;
 			loop3:
 			while (true) {

@@ -54,6 +54,12 @@ expr returns [ double v ]:
 	|  //Caso seja o valor único e não uma nova expressão
 	)	
     | '(' e = expr {$v = $e.v;} ')'
+/*    |
+	(
+	  INT {$v = Double.parseDouble( $INT.text);}{System.out.println("Valor encontrado: " + $v);} 
+    | VAR { $v = memory.get($VAR.text); } {System.out.println("Valor lido da lista: " + $v);} 
+    )
+*/
     ;
 
 expr_rel returns [ boolean t ]
