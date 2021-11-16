@@ -29,3 +29,6 @@ Exemplo de um trecho de código:
 
 
 A gramática deverá ser desenvolvida utilizando a ferramenta ANTLR.
+
+Documentação de uma HashMap
+https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html

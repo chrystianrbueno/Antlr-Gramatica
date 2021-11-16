@@ -12,15 +12,21 @@ options {
     HashMap<String, Double> memory = new HashMap<>();
 }
 
-prog:
+prog
+	:
 	stat+
 	;
-stat	:	
-	(comando';')
+stat
+	:	
+	(
+	  comando';'
+	)
 	| teste
+	| iteracao
 	;	
 	
-comando	:	
+comando
+ 	:	
 	VAR ':=' expr 
 	{ memory.put($VAR.text, new Double($expr.v)); } 
 	{ System.out.println("Variável " + $VAR.text + " = " + $expr.v + " inserida na lista"); }
@@ -37,29 +43,31 @@ iteracao
 	;
 																																																																																																																																																																					
 expr returns [ double v ]:
-	INT {$v = Double.parseDouble( $INT.text);}
+	(
+	  INT {$v = Double.parseDouble( $INT.text);} {System.out.println("Leitura valor unico: " + $v);}
+    | VAR { $v = memory.get($VAR.text); } {System.out.println("Valor lido da lista: " + $v);} )
 	(
 	  '-' e = expr {$v -= $e.v;} {System.out.println("Resultado Subtração: " + $v);}
 	| '+' e = expr {$v += $e.v;} {System.out.println("Resultado Soma: " + $v);}
 	| '/' e = expr {$v /= $e.v;} {System.out.println("Resultado Divisão: " + $v);}
 	| '*' e = expr {$v *= $e.v;} {System.out.println("Resultado Multiplicação: " + $v);}
+	|  //Caso seja o valor único e não uma nova expressão
 	)	
-    |INT {$v = Double.parseDouble( $INT.text);}
-    |'(' e = expr {$v = $e.v;} ')'
+    | '(' e = expr {$v = $e.v;} ')'
     ;
 
 expr_rel returns [ boolean t ]
     : 
     ( e = expr ) 
-    ( '='  {System.out.println("Expressao Relacional: = " );} d = expr {$t = $e.v == $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " = "  + $d.v + " : " + $t);} 
-    | '<'  {System.out.println("Expressao Relacional: < " );} d = expr {$t = $e.v <  $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " < "  + $d.v + " : " + $t);}
-    | '>'  {System.out.println("Expressao Relacional: > " );} d = expr {$t = $e.v >  $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " > "  + $d.v + " : " + $t);} 
-    | '>=' {System.out.println("Expressao Relacional: >= ");} d = expr {$t = $e.v >= $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " >= " + $d.v + " : " + $t);}
-    | '<=' {System.out.println("Expressao Relacional: <= ");} d = expr {$t = $e.v <= $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " <= " + $d.v + " : " + $t);}
-    | '<>' {System.out.println("Expressao Relacional: <> ");} d = expr {$t = $e.v != $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " <> " + $d.v + " : " + $t);} 
+    ( '='  {System.out.println("Expressao Relacional: = identificada");} d = expr {$t = $e.v == $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " = "  + $d.v + " : " + $t);} 
+    | '<'  {System.out.println("Expressao Relacional: < identificada");} d = expr {$t = $e.v <  $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " < "  + $d.v + " : " + $t);}
+    | '>'  {System.out.println("Expressao Relacional: > identificada");} d = expr {$t = $e.v >  $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " > "  + $d.v + " : " + $t);} 
+    | '>=' {System.out.println("Expressao Relacional: >= identificada");} d = expr {$t = $e.v >= $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " >= " + $d.v + " : " + $t);}
+    | '<=' {System.out.println("Expressao Relacional: <= identificada");} d = expr {$t = $e.v <= $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " <= " + $d.v + " : " + $t);}
+    | '<>' {System.out.println("Expressao Relacional: <> identificada");} d = expr {$t = $e.v != $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " <> " + $d.v + " : " + $t);} 
     )   
     ;
     
-WS : (' ' | '\t' | '\r' | '\n')+ {skip();};
-INT     : ('0'..'9')+ ;
-VAR  : ('a'..'z')+ ;
+WS:  (' ' | '\t' | '\r' | '\n')+ {skip();};
+INT: ('0'..'9')+ ;
+VAR: ('a'..'z')+ ;

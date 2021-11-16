@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/Gramatica.g 2021-11-14 17:19:31
+// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g 2021-11-16 16:41:39
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -27,8 +27,8 @@ public class GramaticaLexer extends Lexer {
 	public static final int T__23=23;
 	public static final int T__24=24;
 	public static final int INT=4;
-	public static final int NEWLINE=5;
-	public static final int VAR=6;
+	public static final int VAR=5;
+	public static final int WS=6;
 
 	// delegates
 	// delegators
@@ -43,15 +43,15 @@ public class GramaticaLexer extends Lexer {
 	public GramaticaLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "/home/chrystian/Downloads/TrabalhoGB/Gramatica.g"; }
+	@Override public String getGrammarFileName() { return "/home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g"; }
 
 	// $ANTLR start "T__7"
 	public final void mT__7() throws RecognitionException {
 		try {
 			int _type = T__7;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:7:6: ( '(' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:7:8: '('
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:7:6: ( '(' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:7:8: '('
 			{
 			match('('); 
 			}
@@ -70,8 +70,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__8;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:8:6: ( ')' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:8:8: ')'
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:8:6: ( ')' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:8:8: ')'
 			{
 			match(')'); 
 			}
@@ -90,8 +90,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__9;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:9:6: ( '*' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:9:8: '*'
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:9:6: ( '*' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:9:8: '*'
 			{
 			match('*'); 
 			}
@@ -110,8 +110,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__10;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:10:7: ( '+' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:10:9: '+'
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:10:7: ( '+' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:10:9: '+'
 			{
 			match('+'); 
 			}
@@ -130,8 +130,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__11;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:11:7: ( '-' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:11:9: '-'
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:11:7: ( '-' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:11:9: '-'
 			{
 			match('-'); 
 			}
@@ -150,8 +150,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__12;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:12:7: ( '/' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:12:9: '/'
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:12:7: ( '/' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:12:9: '/'
 			{
 			match('/'); 
 			}
@@ -170,8 +170,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__13;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:13:7: ( ':=' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:13:9: ':='
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:13:7: ( ':=' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:13:9: ':='
 			{
 			match(":="); 
 
@@ -191,8 +191,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__14;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:14:7: ( ';' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:14:9: ';'
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:14:7: ( ';' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:14:9: ';'
 			{
 			match(';'); 
 			}
@@ -211,8 +211,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__15;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:15:7: ( '<' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:15:9: '<'
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:15:7: ( '<' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:15:9: '<'
 			{
 			match('<'); 
 			}
@@ -231,8 +231,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__16;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:16:7: ( '<=' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:16:9: '<='
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:16:7: ( '<=' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:16:9: '<='
 			{
 			match("<="); 
 
@@ -252,8 +252,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__17;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:17:7: ( '<>' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:17:9: '<>'
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:17:7: ( '<>' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:17:9: '<>'
 			{
 			match("<>"); 
 
@@ -273,8 +273,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__18;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:18:7: ( '=' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:18:9: '='
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:18:7: ( '=' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:18:9: '='
 			{
 			match('='); 
 			}
@@ -293,8 +293,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__19;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:19:7: ( '>' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:19:9: '>'
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:19:7: ( '>' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:19:9: '>'
 			{
 			match('>'); 
 			}
@@ -313,8 +313,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__20;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:20:7: ( '>=' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:20:9: '>='
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:20:7: ( '>=' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:20:9: '>='
 			{
 			match(">="); 
 
@@ -334,8 +334,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__21;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:21:7: ( 'do' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:21:9: 'do'
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:21:7: ( 'do' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:21:9: 'do'
 			{
 			match("do"); 
 
@@ -355,8 +355,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__22;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:22:7: ( 'if' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:22:9: 'if'
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:22:7: ( 'if' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:22:9: 'if'
 			{
 			match("if"); 
 
@@ -376,8 +376,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__23;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:23:7: ( 'then' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:23:9: 'then'
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:23:7: ( 'then' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:23:9: 'then'
 			{
 			match("then"); 
 
@@ -397,8 +397,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__24;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:24:7: ( 'while' )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:24:9: 'while'
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:24:7: ( 'while' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:24:9: 'while'
 			{
 			match("while"); 
 
@@ -413,15 +413,15 @@ public class GramaticaLexer extends Lexer {
 	}
 	// $ANTLR end "T__24"
 
-	// $ANTLR start "NEWLINE"
-	public final void mNEWLINE() throws RecognitionException {
+	// $ANTLR start "WS"
+	public final void mWS() throws RecognitionException {
 		try {
-			int _type = NEWLINE;
+			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:63:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:63:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:71:3: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:71:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			{
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:63:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:71:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -433,7 +433,7 @@ public class GramaticaLexer extends Lexer {
 
 				switch (alt1) {
 				case 1 :
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:
+					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:
 					{
 					if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 						input.consume();
@@ -464,17 +464,17 @@ public class GramaticaLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "NEWLINE"
+	// $ANTLR end "WS"
 
 	// $ANTLR start "INT"
 	public final void mINT() throws RecognitionException {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:64:9: ( ( '0' .. '9' )+ )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:64:11: ( '0' .. '9' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:72:4: ( ( '0' .. '9' )+ )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:72:6: ( '0' .. '9' )+
 			{
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:64:11: ( '0' .. '9' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:72:6: ( '0' .. '9' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -486,7 +486,7 @@ public class GramaticaLexer extends Lexer {
 
 				switch (alt2) {
 				case 1 :
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:
+					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -523,10 +523,10 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = VAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:65:6: ( ( 'a' .. 'z' )+ )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:65:8: ( 'a' .. 'z' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:73:4: ( ( 'a' .. 'z' )+ )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:73:6: ( 'a' .. 'z' )+
 			{
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:65:8: ( 'a' .. 'z' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:73:6: ( 'a' .. 'z' )+
 			int cnt3=0;
 			loop3:
 			while (true) {
@@ -538,7 +538,7 @@ public class GramaticaLexer extends Lexer {
 
 				switch (alt3) {
 				case 1 :
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:
+					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:
 					{
 					if ( (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -572,7 +572,7 @@ public class GramaticaLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:8: ( T__7 | T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | NEWLINE | INT | VAR )
+		// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:8: ( T__7 | T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | WS | INT | VAR )
 		int alt4=21;
 		switch ( input.LA(1) ) {
 		case '(':
@@ -830,147 +830,147 @@ public class GramaticaLexer extends Lexer {
 		}
 		switch (alt4) {
 			case 1 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:10: T__7
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:10: T__7
 				{
 				mT__7(); 
 
 				}
 				break;
 			case 2 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:15: T__8
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:15: T__8
 				{
 				mT__8(); 
 
 				}
 				break;
 			case 3 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:20: T__9
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:20: T__9
 				{
 				mT__9(); 
 
 				}
 				break;
 			case 4 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:25: T__10
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:25: T__10
 				{
 				mT__10(); 
 
 				}
 				break;
 			case 5 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:31: T__11
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:31: T__11
 				{
 				mT__11(); 
 
 				}
 				break;
 			case 6 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:37: T__12
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:37: T__12
 				{
 				mT__12(); 
 
 				}
 				break;
 			case 7 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:43: T__13
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:43: T__13
 				{
 				mT__13(); 
 
 				}
 				break;
 			case 8 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:49: T__14
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:49: T__14
 				{
 				mT__14(); 
 
 				}
 				break;
 			case 9 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:55: T__15
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:55: T__15
 				{
 				mT__15(); 
 
 				}
 				break;
 			case 10 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:61: T__16
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:61: T__16
 				{
 				mT__16(); 
 
 				}
 				break;
 			case 11 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:67: T__17
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:67: T__17
 				{
 				mT__17(); 
 
 				}
 				break;
 			case 12 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:73: T__18
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:73: T__18
 				{
 				mT__18(); 
 
 				}
 				break;
 			case 13 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:79: T__19
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:79: T__19
 				{
 				mT__19(); 
 
 				}
 				break;
 			case 14 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:85: T__20
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:85: T__20
 				{
 				mT__20(); 
 
 				}
 				break;
 			case 15 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:91: T__21
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:91: T__21
 				{
 				mT__21(); 
 
 				}
 				break;
 			case 16 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:97: T__22
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:97: T__22
 				{
 				mT__22(); 
 
 				}
 				break;
 			case 17 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:103: T__23
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:103: T__23
 				{
 				mT__23(); 
 
 				}
 				break;
 			case 18 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:109: T__24
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:109: T__24
 				{
 				mT__24(); 
 
 				}
 				break;
 			case 19 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:115: NEWLINE
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:115: WS
 				{
-				mNEWLINE(); 
+				mWS(); 
 
 				}
 				break;
 			case 20 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:123: INT
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:118: INT
 				{
 				mINT(); 
 
 				}
 				break;
 			case 21 :
-				// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:1:127: VAR
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:122: VAR
 				{
 				mVAR(); 
 
