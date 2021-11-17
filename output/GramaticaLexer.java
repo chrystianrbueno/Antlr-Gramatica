@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g 2021-11-16 17:02:06
+// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g 2021-11-16 21:22:02
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -26,6 +26,7 @@ public class GramaticaLexer extends Lexer {
 	public static final int T__22=22;
 	public static final int T__23=23;
 	public static final int T__24=24;
+	public static final int T__25=25;
 	public static final int INT=4;
 	public static final int VAR=5;
 	public static final int WS=6;
@@ -355,10 +356,10 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__22;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:22:7: ( 'if' )
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:22:9: 'if'
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:22:7: ( 'else' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:22:9: 'else'
 			{
-			match("if"); 
+			match("else"); 
 
 			}
 
@@ -376,10 +377,10 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__23;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:23:7: ( 'then' )
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:23:9: 'then'
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:23:7: ( 'if' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:23:9: 'if'
 			{
-			match("then"); 
+			match("if"); 
 
 			}
 
@@ -397,10 +398,10 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__24;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:24:7: ( 'while' )
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:24:9: 'while'
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:24:7: ( 'then' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:24:9: 'then'
 			{
-			match("while"); 
+			match("then"); 
 
 			}
 
@@ -413,15 +414,36 @@ public class GramaticaLexer extends Lexer {
 	}
 	// $ANTLR end "T__24"
 
+	// $ANTLR start "T__25"
+	public final void mT__25() throws RecognitionException {
+		try {
+			int _type = T__25;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:25:7: ( 'while' )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:25:9: 'while'
+			{
+			match("while"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__25"
+
 	// $ANTLR start "WS"
 	public final void mWS() throws RecognitionException {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:77:3: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:77:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:85:3: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:85:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			{
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:77:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:85:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -471,10 +493,10 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:78:4: ( ( '0' .. '9' )+ )
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:78:6: ( '0' .. '9' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:86:4: ( ( '0' .. '9' )+ )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:86:6: ( '0' .. '9' )+
 			{
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:78:6: ( '0' .. '9' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:86:6: ( '0' .. '9' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -523,10 +545,10 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = VAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:79:4: ( ( 'a' .. 'z' )+ )
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:79:6: ( 'a' .. 'z' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:87:4: ( ( 'a' .. 'z' )+ )
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:87:6: ( 'a' .. 'z' )+
 			{
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:79:6: ( 'a' .. 'z' )+
+			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:87:6: ( 'a' .. 'z' )+
 			int cnt3=0;
 			loop3:
 			while (true) {
@@ -572,8 +594,8 @@ public class GramaticaLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:8: ( T__7 | T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | WS | INT | VAR )
-		int alt4=21;
+		// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:8: ( T__7 | T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | WS | INT | VAR )
+		int alt4=22;
 		switch ( input.LA(1) ) {
 		case '(':
 			{
@@ -655,9 +677,9 @@ public class GramaticaLexer extends Lexer {
 			{
 			int LA4_12 = input.LA(2);
 			if ( (LA4_12=='o') ) {
-				int LA4_24 = input.LA(3);
-				if ( ((LA4_24 >= 'a' && LA4_24 <= 'z')) ) {
-					alt4=21;
+				int LA4_25 = input.LA(3);
+				if ( ((LA4_25 >= 'a' && LA4_25 <= 'z')) ) {
+					alt4=22;
 				}
 
 				else {
@@ -667,110 +689,147 @@ public class GramaticaLexer extends Lexer {
 			}
 
 			else {
-				alt4=21;
+				alt4=22;
+			}
+
+			}
+			break;
+		case 'e':
+			{
+			int LA4_13 = input.LA(2);
+			if ( (LA4_13=='l') ) {
+				int LA4_26 = input.LA(3);
+				if ( (LA4_26=='s') ) {
+					int LA4_31 = input.LA(4);
+					if ( (LA4_31=='e') ) {
+						int LA4_35 = input.LA(5);
+						if ( ((LA4_35 >= 'a' && LA4_35 <= 'z')) ) {
+							alt4=22;
+						}
+
+						else {
+							alt4=16;
+						}
+
+					}
+
+					else {
+						alt4=22;
+					}
+
+				}
+
+				else {
+					alt4=22;
+				}
+
+			}
+
+			else {
+				alt4=22;
 			}
 
 			}
 			break;
 		case 'i':
 			{
-			int LA4_13 = input.LA(2);
-			if ( (LA4_13=='f') ) {
-				int LA4_25 = input.LA(3);
-				if ( ((LA4_25 >= 'a' && LA4_25 <= 'z')) ) {
-					alt4=21;
+			int LA4_14 = input.LA(2);
+			if ( (LA4_14=='f') ) {
+				int LA4_27 = input.LA(3);
+				if ( ((LA4_27 >= 'a' && LA4_27 <= 'z')) ) {
+					alt4=22;
 				}
 
 				else {
-					alt4=16;
+					alt4=17;
 				}
 
 			}
 
 			else {
-				alt4=21;
+				alt4=22;
 			}
 
 			}
 			break;
 		case 't':
 			{
-			int LA4_14 = input.LA(2);
-			if ( (LA4_14=='h') ) {
-				int LA4_26 = input.LA(3);
-				if ( (LA4_26=='e') ) {
-					int LA4_30 = input.LA(4);
-					if ( (LA4_30=='n') ) {
-						int LA4_32 = input.LA(5);
-						if ( ((LA4_32 >= 'a' && LA4_32 <= 'z')) ) {
-							alt4=21;
+			int LA4_15 = input.LA(2);
+			if ( (LA4_15=='h') ) {
+				int LA4_28 = input.LA(3);
+				if ( (LA4_28=='e') ) {
+					int LA4_33 = input.LA(4);
+					if ( (LA4_33=='n') ) {
+						int LA4_36 = input.LA(5);
+						if ( ((LA4_36 >= 'a' && LA4_36 <= 'z')) ) {
+							alt4=22;
 						}
 
 						else {
-							alt4=17;
+							alt4=18;
 						}
 
 					}
 
 					else {
-						alt4=21;
+						alt4=22;
 					}
 
 				}
 
 				else {
-					alt4=21;
+					alt4=22;
 				}
 
 			}
 
 			else {
-				alt4=21;
+				alt4=22;
 			}
 
 			}
 			break;
 		case 'w':
 			{
-			int LA4_15 = input.LA(2);
-			if ( (LA4_15=='h') ) {
-				int LA4_27 = input.LA(3);
-				if ( (LA4_27=='i') ) {
-					int LA4_31 = input.LA(4);
-					if ( (LA4_31=='l') ) {
-						int LA4_33 = input.LA(5);
-						if ( (LA4_33=='e') ) {
-							int LA4_35 = input.LA(6);
-							if ( ((LA4_35 >= 'a' && LA4_35 <= 'z')) ) {
-								alt4=21;
+			int LA4_16 = input.LA(2);
+			if ( (LA4_16=='h') ) {
+				int LA4_29 = input.LA(3);
+				if ( (LA4_29=='i') ) {
+					int LA4_34 = input.LA(4);
+					if ( (LA4_34=='l') ) {
+						int LA4_37 = input.LA(5);
+						if ( (LA4_37=='e') ) {
+							int LA4_40 = input.LA(6);
+							if ( ((LA4_40 >= 'a' && LA4_40 <= 'z')) ) {
+								alt4=22;
 							}
 
 							else {
-								alt4=18;
+								alt4=19;
 							}
 
 						}
 
 						else {
-							alt4=21;
+							alt4=22;
 						}
 
 					}
 
 					else {
-						alt4=21;
+						alt4=22;
 					}
 
 				}
 
 				else {
-					alt4=21;
+					alt4=22;
 				}
 
 			}
 
 			else {
-				alt4=21;
+				alt4=22;
 			}
 
 			}
@@ -780,7 +839,7 @@ public class GramaticaLexer extends Lexer {
 		case '\r':
 		case ' ':
 			{
-			alt4=19;
+			alt4=20;
 			}
 			break;
 		case '0':
@@ -794,13 +853,12 @@ public class GramaticaLexer extends Lexer {
 		case '8':
 		case '9':
 			{
-			alt4=20;
+			alt4=21;
 			}
 			break;
 		case 'a':
 		case 'b':
 		case 'c':
-		case 'e':
 		case 'f':
 		case 'g':
 		case 'h':
@@ -820,7 +878,7 @@ public class GramaticaLexer extends Lexer {
 		case 'y':
 		case 'z':
 			{
-			alt4=21;
+			alt4=22;
 			}
 			break;
 		default:
@@ -956,21 +1014,28 @@ public class GramaticaLexer extends Lexer {
 				}
 				break;
 			case 19 :
-				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:115: WS
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:115: T__25
+				{
+				mT__25(); 
+
+				}
+				break;
+			case 20 :
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:121: WS
 				{
 				mWS(); 
 
 				}
 				break;
-			case 20 :
-				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:118: INT
+			case 21 :
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:124: INT
 				{
 				mINT(); 
 
 				}
 				break;
-			case 21 :
-				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:122: VAR
+			case 22 :
+				// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:1:128: VAR
 				{
 				mVAR(); 
 
