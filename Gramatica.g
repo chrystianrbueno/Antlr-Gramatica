@@ -52,7 +52,8 @@ iteracao
 expr_rel returns [ boolean t ]
     : 
     ( e = expr ) 
-    ( '='  {System.out.println("Expressao Relacional: = identificada");} d = expr {$t = $e.v == $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " = "  + $d.v + " : " + $t);} 
+    ( 
+      '='  {System.out.println("Expressao Relacional: = identificada");} d = expr {$t = $e.v == $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " = "  + $d.v + " : " + $t);} 
     | '<'  {System.out.println("Expressao Relacional: < identificada");} d = expr {$t = $e.v <  $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " < "  + $d.v + " : " + $t);}
     | '>'  {System.out.println("Expressao Relacional: > identificada");} d = expr {$t = $e.v >  $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " > "  + $d.v + " : " + $t);} 
     | '>=' {System.out.println("Expressao Relacional: >= identificada");} d = expr {$t = $e.v >= $d.v;} {System.out.println("Resultado Expressao Relacional: " + $e.v + " >= " + $d.v + " : " + $t);}
@@ -63,7 +64,7 @@ expr_rel returns [ boolean t ]
 expr returns [ double v ]
 	:
 	(
-	  INT { $v = Double.parseDouble( $INT.text);} {System.out.println("Valor encontrado na expressão: " + $v);}
+	  INT { $v = Double.parseDouble( $INT.text);} {System.out.println("Valor encontrado na Expressão: " + $v);}
     | VAR { $v = memory.getOrDefault($VAR.text, 0.0); } {System.out.println("Variável "+ $VAR.text +" valor lido da lista: " + $v);} )
 	(
 	  '-' {System.out.println("Sinal '-' encontrado");} e = expr {$v -= $e.v;} {System.out.println("Resultado Subtração: " + $v);}
@@ -72,11 +73,11 @@ expr returns [ double v ]
 	| '*' {System.out.println("Sinal '*' encontrado");} e = expr {$v *= $e.v;} {System.out.println("Resultado Multiplicação: " + $v);}
 	|  //Caso seja o valor único e não uma nova expressão
 	)	
-    | '(' e = expr {$v = $e.v;} ')'
+    | '(' e = expr {$v = $e.v;} ')' {System.out.println("Expressão com '()' encontrado, prioridade na expressão");}
 /*    |
 	(
 	  INT {$v = Double.parseDouble( $INT.text);}{System.out.println("Valor encontrado: " + $v);} 
-    | VAR { $v = memory.get($VAR.text); } {System.out.println("Valor lido da lista: " + $v);} 
+    | VAR { $v = memory.get($VAR.text); } {NT {$v = Double.parseDouble( $INT.text);}{System.out.println("Valor encontrado: " + $v);} System.out.println("Valor lido da lista: " + $v);} 
     )
 */
     ;

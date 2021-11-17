@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g 2021-11-16 21:22:02
+// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/Gramatica.g 2021-11-17 10:47:30
 
     import java.util.HashMap;
 
@@ -50,8 +50,8 @@ public class GramaticaParser extends DebugParser {
 
 
 	public static final String[] ruleNames = new String[] {
-		"invalidRule", "stat", "comando", "expr", "prog", "alternativa", "iteracao", 
-		"expr_rel", "teste"
+		"invalidRule", "teste", "stat", "expr", "alternativa", "comando", "prog", 
+		"expr_rel", "iteracao"
 	};
 
 	public static final boolean[] decisionCanBacktrack = new boolean[] {
@@ -91,7 +91,7 @@ public class GramaticaParser extends DebugParser {
 	}
 
 	@Override public String[] getTokenNames() { return GramaticaParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "/home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g"; }
+	@Override public String getGrammarFileName() { return "/home/chrystian/Downloads/TrabalhoGB/Gramatica.g"; }
 
 
 	    HashMap<String, Double> memory = new HashMap<>();
@@ -99,7 +99,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "prog"
-	// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:15:1: prog : ( stat )+ ;
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:15:1: prog : ( stat )+ ;
 	public final void prog() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "prog");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -107,13 +107,13 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(15, 0);
 
 		try {
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:16:2: ( ( stat )+ )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:16:2: ( ( stat )+ )
 			dbg.enterAlt(1);
 
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:17:2: ( stat )+
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:17:2: ( stat )+
 			{
 			dbg.location(17,2);
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:17:2: ( stat )+
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:17:2: ( stat )+
 			int cnt1=0;
 			try { dbg.enterSubRule(1);
 
@@ -133,7 +133,7 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:17:2: stat
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:17:2: stat
 					{
 					dbg.location(17,2);
 					pushFollow(FOLLOW_stat_in_prog37);
@@ -179,7 +179,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "stat"
-	// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:19:1: stat : ( ( comando ';' ) | teste | iteracao );
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:19:1: stat : ( ( comando ';' ) | teste | iteracao );
 	public final void stat() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "stat");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -187,7 +187,7 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(19, 0);
 
 		try {
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:20:2: ( ( comando ';' ) | teste | iteracao )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:20:2: ( ( comando ';' ) | teste | iteracao )
 			int alt2=3;
 			try { dbg.enterDecision(2, decisionCanBacktrack[2]);
 
@@ -219,13 +219,13 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:21:2: ( comando ';' )
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:21:2: ( comando ';' )
 					{
 					dbg.location(21,2);
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:21:2: ( comando ';' )
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:21:2: ( comando ';' )
 					dbg.enterAlt(1);
 
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:22:4: comando ';'
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:22:4: comando ';'
 					{
 					dbg.location(22,4);
 					pushFollow(FOLLOW_comando_in_stat55);
@@ -240,7 +240,7 @@ public class GramaticaParser extends DebugParser {
 				case 2 :
 					dbg.enterAlt(2);
 
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:24:4: teste
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:24:4: teste
 					{
 					dbg.location(24,4);
 					pushFollow(FOLLOW_teste_in_stat64);
@@ -252,7 +252,7 @@ public class GramaticaParser extends DebugParser {
 				case 3 :
 					dbg.enterAlt(3);
 
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:25:4: iteracao
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:25:4: iteracao
 					{
 					dbg.location(25,4);
 					pushFollow(FOLLOW_iteracao_in_stat69);
@@ -286,7 +286,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "comando"
-	// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:28:1: comando : VAR ':=' expr ;
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:28:1: comando : VAR ':=' expr ;
 	public final void comando() throws RecognitionException {
 		Token VAR2=null;
 		double expr1 =0.0;
@@ -297,10 +297,10 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(28, 0);
 
 		try {
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:29:3: ( VAR ':=' expr )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:29:3: ( VAR ':=' expr )
 			dbg.enterAlt(1);
 
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:30:2: VAR ':=' expr
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:30:2: VAR ':=' expr
 			{
 			dbg.location(30,2);
 			VAR2=(Token)match(input,VAR,FOLLOW_VAR_in_comando85); dbg.location(30,6);
@@ -337,7 +337,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "teste"
-	// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:36:1: teste : ( 'if' expr_rel 'then' stat alternativa ) ;
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:36:1: teste : ( 'if' expr_rel 'then' stat alternativa ) ;
 	public final void teste() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "teste");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -345,16 +345,16 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(36, 0);
 
 		try {
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:37:2: ( ( 'if' expr_rel 'then' stat alternativa ) )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:37:2: ( ( 'if' expr_rel 'then' stat alternativa ) )
 			dbg.enterAlt(1);
 
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:38:2: ( 'if' expr_rel 'then' stat alternativa )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:38:2: ( 'if' expr_rel 'then' stat alternativa )
 			{
 			dbg.location(38,2);
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:38:2: ( 'if' expr_rel 'then' stat alternativa )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:38:2: ( 'if' expr_rel 'then' stat alternativa )
 			dbg.enterAlt(1);
 
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:38:3: 'if' expr_rel 'then' stat alternativa
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:38:3: 'if' expr_rel 'then' stat alternativa
 			{
 			dbg.location(38,3);
 			match(input,23,FOLLOW_23_in_teste114); dbg.location(38,8);
@@ -398,7 +398,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "alternativa"
-	// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:41:1: alternativa : ( ( 'else' stat ) |);
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:41:1: alternativa : ( ( 'else' stat ) |);
 	public final void alternativa() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "alternativa");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -406,7 +406,7 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(41, 0);
 
 		try {
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:42:2: ( ( 'else' stat ) |)
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:42:2: ( ( 'else' stat ) |)
 			int alt3=2;
 			try { dbg.enterDecision(3, decisionCanBacktrack[3]);
 
@@ -431,13 +431,13 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:43:2: ( 'else' stat )
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:43:2: ( 'else' stat )
 					{
 					dbg.location(43,2);
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:43:2: ( 'else' stat )
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:43:2: ( 'else' stat )
 					dbg.enterAlt(1);
 
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:43:3: 'else' stat
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:43:3: 'else' stat
 					{
 					dbg.location(43,3);
 					match(input,22,FOLLOW_22_in_alternativa137); dbg.location(43,10);
@@ -452,7 +452,7 @@ public class GramaticaParser extends DebugParser {
 				case 2 :
 					dbg.enterAlt(2);
 
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:45:2: 
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:45:2: 
 					{
 					}
 					break;
@@ -481,7 +481,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "iteracao"
-	// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:46:1: iteracao : ( 'while' expr_rel 'do' stat ) ;
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:46:1: iteracao : ( 'while' expr_rel 'do' stat ) ;
 	public final void iteracao() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "iteracao");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -489,16 +489,16 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(46, 0);
 
 		try {
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:47:2: ( ( 'while' expr_rel 'do' stat ) )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:47:2: ( ( 'while' expr_rel 'do' stat ) )
 			dbg.enterAlt(1);
 
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:48:2: ( 'while' expr_rel 'do' stat )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:48:2: ( 'while' expr_rel 'do' stat )
 			{
 			dbg.location(48,2);
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:48:2: ( 'while' expr_rel 'do' stat )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:48:2: ( 'while' expr_rel 'do' stat )
 			dbg.enterAlt(1);
 
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:48:3: 'while' expr_rel 'do' stat
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:48:3: 'while' expr_rel 'do' stat
 			{
 			dbg.location(48,3);
 			match(input,25,FOLLOW_25_in_iteracao156); dbg.location(48,11);
@@ -538,7 +538,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "expr_rel"
-	// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:52:1: expr_rel returns [ boolean t ] : (e= expr ) ( '=' d= expr | '<' d= expr | '>' d= expr | '>=' d= expr | '<=' d= expr | '<>' d= expr ) ;
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:52:1: expr_rel returns [ boolean t ] : (e= expr ) ( '=' d= expr | '<' d= expr | '>' d= expr | '>=' d= expr | '<=' d= expr | '<>' d= expr ) ;
 	public final boolean expr_rel() throws RecognitionException {
 		boolean t = false;
 
@@ -552,16 +552,16 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(52, 0);
 
 		try {
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:53:5: ( (e= expr ) ( '=' d= expr | '<' d= expr | '>' d= expr | '>=' d= expr | '<=' d= expr | '<>' d= expr ) )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:53:5: ( (e= expr ) ( '=' d= expr | '<' d= expr | '>' d= expr | '>=' d= expr | '<=' d= expr | '<>' d= expr ) )
 			dbg.enterAlt(1);
 
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:54:5: (e= expr ) ( '=' d= expr | '<' d= expr | '>' d= expr | '>=' d= expr | '<=' d= expr | '<>' d= expr )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:54:5: (e= expr ) ( '=' d= expr | '<' d= expr | '>' d= expr | '>=' d= expr | '<=' d= expr | '<>' d= expr )
 			{
 			dbg.location(54,5);
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:54:5: (e= expr )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:54:5: (e= expr )
 			dbg.enterAlt(1);
 
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:54:7: e= expr
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:54:7: e= expr
 			{
 			dbg.location(54,9);
 			pushFollow(FOLLOW_expr_in_expr_rel358);
@@ -570,7 +570,7 @@ public class GramaticaParser extends DebugParser {
 
 			}
 			dbg.location(55,5);
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:55:5: ( '=' d= expr | '<' d= expr | '>' d= expr | '>=' d= expr | '<=' d= expr | '<>' d= expr )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:55:5: ( '=' d= expr | '<' d= expr | '>' d= expr | '>=' d= expr | '<=' d= expr | '<>' d= expr )
 			int alt4=6;
 			try { dbg.enterSubRule(4);
 			try { dbg.enterDecision(4, decisionCanBacktrack[4]);
@@ -618,7 +618,7 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:55:7: '=' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:55:7: '=' d= expr
 					{
 					dbg.location(55,7);
 					match(input,18,FOLLOW_18_in_expr_rel369); dbg.location(55,12);
@@ -634,7 +634,7 @@ public class GramaticaParser extends DebugParser {
 				case 2 :
 					dbg.enterAlt(2);
 
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:56:7: '<' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:56:7: '<' d= expr
 					{
 					dbg.location(56,7);
 					match(input,15,FOLLOW_15_in_expr_rel391); dbg.location(56,12);
@@ -650,7 +650,7 @@ public class GramaticaParser extends DebugParser {
 				case 3 :
 					dbg.enterAlt(3);
 
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:57:7: '>' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:57:7: '>' d= expr
 					{
 					dbg.location(57,7);
 					match(input,19,FOLLOW_19_in_expr_rel412); dbg.location(57,12);
@@ -666,7 +666,7 @@ public class GramaticaParser extends DebugParser {
 				case 4 :
 					dbg.enterAlt(4);
 
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:58:7: '>=' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:58:7: '>=' d= expr
 					{
 					dbg.location(58,7);
 					match(input,20,FOLLOW_20_in_expr_rel434); dbg.location(58,12);
@@ -682,7 +682,7 @@ public class GramaticaParser extends DebugParser {
 				case 5 :
 					dbg.enterAlt(5);
 
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:59:7: '<=' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:59:7: '<=' d= expr
 					{
 					dbg.location(59,7);
 					match(input,16,FOLLOW_16_in_expr_rel454); dbg.location(59,12);
@@ -698,7 +698,7 @@ public class GramaticaParser extends DebugParser {
 				case 6 :
 					dbg.enterAlt(6);
 
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:60:7: '<>' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:60:7: '<>' d= expr
 					{
 					dbg.location(60,7);
 					match(input,17,FOLLOW_17_in_expr_rel474); dbg.location(60,12);
@@ -741,7 +741,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "expr"
-	// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:63:1: expr returns [ double v ] : ( ( INT | VAR ) ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr |) | '(' e= expr ')' );
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:63:1: expr returns [ double v ] : ( ( INT | VAR ) ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr |) | '(' e= expr ')' );
 	public final double expr() throws RecognitionException {
 		double v = 0.0;
 
@@ -756,7 +756,7 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(63, 0);
 
 		try {
-			// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:64:2: ( ( INT | VAR ) ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr |) | '(' e= expr ')' )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:64:2: ( ( INT | VAR ) ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr |) | '(' e= expr ')' )
 			int alt7=2;
 			try { dbg.enterDecision(7, decisionCanBacktrack[7]);
 
@@ -781,10 +781,10 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:65:2: ( INT | VAR ) ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr |)
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:65:2: ( INT | VAR ) ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr |)
 					{
 					dbg.location(65,2);
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:65:2: ( INT | VAR )
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:65:2: ( INT | VAR )
 					int alt5=2;
 					try { dbg.enterSubRule(5);
 					try { dbg.enterDecision(5, decisionCanBacktrack[5]);
@@ -810,7 +810,7 @@ public class GramaticaParser extends DebugParser {
 						case 1 :
 							dbg.enterAlt(1);
 
-							// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:66:4: INT
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:66:4: INT
 							{
 							dbg.location(66,4);
 							INT3=(Token)match(input,INT,FOLLOW_INT_in_expr519); dbg.location(66,8);
@@ -821,7 +821,7 @@ public class GramaticaParser extends DebugParser {
 						case 2 :
 							dbg.enterAlt(2);
 
-							// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:67:7: VAR
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:67:7: VAR
 							{
 							dbg.location(67,7);
 							VAR4=(Token)match(input,VAR,FOLLOW_VAR_in_expr531); dbg.location(67,11);
@@ -833,7 +833,7 @@ public class GramaticaParser extends DebugParser {
 					}
 					} finally {dbg.exitSubRule(5);}
 					dbg.location(68,2);
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:68:2: ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr |)
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:68:2: ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr |)
 					int alt6=5;
 					try { dbg.enterSubRule(6);
 					try { dbg.enterDecision(6, decisionCanBacktrack[6]);
@@ -885,7 +885,7 @@ public class GramaticaParser extends DebugParser {
 						case 1 :
 							dbg.enterAlt(1);
 
-							// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:69:4: '-' e= expr
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:69:4: '-' e= expr
 							{
 							dbg.location(69,4);
 							match(input,11,FOLLOW_11_in_expr545); dbg.location(69,8);
@@ -901,7 +901,7 @@ public class GramaticaParser extends DebugParser {
 						case 2 :
 							dbg.enterAlt(2);
 
-							// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:70:4: '+' e= expr
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:70:4: '+' e= expr
 							{
 							dbg.location(70,4);
 							match(input,10,FOLLOW_10_in_expr562); dbg.location(70,8);
@@ -917,7 +917,7 @@ public class GramaticaParser extends DebugParser {
 						case 3 :
 							dbg.enterAlt(3);
 
-							// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:71:4: '/' e= expr
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:71:4: '/' e= expr
 							{
 							dbg.location(71,4);
 							match(input,12,FOLLOW_12_in_expr579); dbg.location(71,8);
@@ -933,7 +933,7 @@ public class GramaticaParser extends DebugParser {
 						case 4 :
 							dbg.enterAlt(4);
 
-							// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:72:4: '*' e= expr
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:72:4: '*' e= expr
 							{
 							dbg.location(72,4);
 							match(input,9,FOLLOW_9_in_expr596); dbg.location(72,8);
@@ -949,7 +949,7 @@ public class GramaticaParser extends DebugParser {
 						case 5 :
 							dbg.enterAlt(5);
 
-							// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:74:2: 
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:74:2: 
 							{
 							}
 							break;
@@ -962,7 +962,7 @@ public class GramaticaParser extends DebugParser {
 				case 2 :
 					dbg.enterAlt(2);
 
-					// /home/chrystian/Downloads/TrabalhoGB/TrabalhoGB/Gramatica.g:75:7: '(' e= expr ')'
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:75:7: '(' e= expr ')'
 					{
 					dbg.location(75,7);
 					match(input,7,FOLLOW_7_in_expr625); dbg.location(75,13);
@@ -971,7 +971,8 @@ public class GramaticaParser extends DebugParser {
 					state._fsp--;
 					dbg.location(75,20);
 					v = e;dbg.location(75,33);
-					match(input,8,FOLLOW_8_in_expr635); 
+					match(input,8,FOLLOW_8_in_expr635); dbg.location(75,37);
+					System.out.println("Expressão com '()' encontrado, prioridade na expressão");
 					}
 					break;
 
