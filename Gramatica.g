@@ -35,17 +35,17 @@ comando
 
 teste
 	:
-	('if' expr_rel 'then' stat alternativa) 
+	('if' expr_rel 'then' prog alternativa) 
 	;
 
 alternativa
 	:
-	('else' stat)	
+	('else' prog)	
 	|
 	;
 iteracao
 	:
-	('while' expr_rel 'do' stat)
+	('while' expr_rel 'do' prog)
 	;
 																																																																																																																																																																					
 
@@ -85,4 +85,4 @@ expr returns [ double v ]
     
 WS:  (' ' | '\t' | '\r' | '\n')+ {skip();};
 INT: ('0'..'9')+ ;
-VAR: ('a'..'z')+ ;
+VAR	: ('a'..'z' | 'A'..'Z')+;

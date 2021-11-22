@@ -1,0 +1,15 @@
+b := 4 /(2+3);
+aAaA := b + c * 1;
+if a=1 then
+aAaAAA:=0;
+aAaAABB:=0;
+aAaAABBCCCc:=0;
+if b=0 then
+aAaAAA:=0;
+aAaAABB:=0;
+aAaAABBCCCc:=0;
+else 
+b:=1;
+aAaAAA:=0;
+aAaAABB:=0;
+aAaAABBCCCc:=0;

@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/Gramatica.g 2021-11-22 17:36:38
+// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/Gramatica.g 2021-11-22 18:17:48
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -545,16 +545,16 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = VAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:88:4: ( ( 'a' .. 'z' )+ )
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:88:6: ( 'a' .. 'z' )+
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:88:5: ( ( 'a' .. 'z' | 'A' .. 'Z' )+ )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:88:7: ( 'a' .. 'z' | 'A' .. 'Z' )+
 			{
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:88:6: ( 'a' .. 'z' )+
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:88:7: ( 'a' .. 'z' | 'A' .. 'Z' )+
 			int cnt3=0;
 			loop3:
 			while (true) {
 				int alt3=2;
 				int LA3_0 = input.LA(1);
-				if ( ((LA3_0 >= 'a' && LA3_0 <= 'z')) ) {
+				if ( ((LA3_0 >= 'A' && LA3_0 <= 'Z')||(LA3_0 >= 'a' && LA3_0 <= 'z')) ) {
 					alt3=1;
 				}
 
@@ -562,7 +562,7 @@ public class GramaticaLexer extends Lexer {
 				case 1 :
 					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:
 					{
-					if ( (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+					if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
 					}
 					else {
@@ -678,7 +678,7 @@ public class GramaticaLexer extends Lexer {
 			int LA4_12 = input.LA(2);
 			if ( (LA4_12=='o') ) {
 				int LA4_25 = input.LA(3);
-				if ( ((LA4_25 >= 'a' && LA4_25 <= 'z')) ) {
+				if ( ((LA4_25 >= 'A' && LA4_25 <= 'Z')||(LA4_25 >= 'a' && LA4_25 <= 'z')) ) {
 					alt4=22;
 				}
 
@@ -703,7 +703,7 @@ public class GramaticaLexer extends Lexer {
 					int LA4_31 = input.LA(4);
 					if ( (LA4_31=='e') ) {
 						int LA4_35 = input.LA(5);
-						if ( ((LA4_35 >= 'a' && LA4_35 <= 'z')) ) {
+						if ( ((LA4_35 >= 'A' && LA4_35 <= 'Z')||(LA4_35 >= 'a' && LA4_35 <= 'z')) ) {
 							alt4=22;
 						}
 
@@ -736,7 +736,7 @@ public class GramaticaLexer extends Lexer {
 			int LA4_14 = input.LA(2);
 			if ( (LA4_14=='f') ) {
 				int LA4_27 = input.LA(3);
-				if ( ((LA4_27 >= 'a' && LA4_27 <= 'z')) ) {
+				if ( ((LA4_27 >= 'A' && LA4_27 <= 'Z')||(LA4_27 >= 'a' && LA4_27 <= 'z')) ) {
 					alt4=22;
 				}
 
@@ -761,7 +761,7 @@ public class GramaticaLexer extends Lexer {
 					int LA4_33 = input.LA(4);
 					if ( (LA4_33=='n') ) {
 						int LA4_36 = input.LA(5);
-						if ( ((LA4_36 >= 'a' && LA4_36 <= 'z')) ) {
+						if ( ((LA4_36 >= 'A' && LA4_36 <= 'Z')||(LA4_36 >= 'a' && LA4_36 <= 'z')) ) {
 							alt4=22;
 						}
 
@@ -800,7 +800,7 @@ public class GramaticaLexer extends Lexer {
 						int LA4_37 = input.LA(5);
 						if ( (LA4_37=='e') ) {
 							int LA4_40 = input.LA(6);
-							if ( ((LA4_40 >= 'a' && LA4_40 <= 'z')) ) {
+							if ( ((LA4_40 >= 'A' && LA4_40 <= 'Z')||(LA4_40 >= 'a' && LA4_40 <= 'z')) ) {
 								alt4=22;
 							}
 
@@ -856,6 +856,32 @@ public class GramaticaLexer extends Lexer {
 			alt4=21;
 			}
 			break;
+		case 'A':
+		case 'B':
+		case 'C':
+		case 'D':
+		case 'E':
+		case 'F':
+		case 'G':
+		case 'H':
+		case 'I':
+		case 'J':
+		case 'K':
+		case 'L':
+		case 'M':
+		case 'N':
+		case 'O':
+		case 'P':
+		case 'Q':
+		case 'R':
+		case 'S':
+		case 'T':
+		case 'U':
+		case 'V':
+		case 'W':
+		case 'X':
+		case 'Y':
+		case 'Z':
 		case 'a':
 		case 'b':
 		case 'c':

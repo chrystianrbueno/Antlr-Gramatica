@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/Gramatica.g 2021-11-22 17:36:38
+// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/Gramatica.g 2021-11-22 18:17:48
 
     import java.util.HashMap;
 
@@ -50,8 +50,8 @@ public class GramaticaParser extends DebugParser {
 
 
 	public static final String[] ruleNames = new String[] {
-		"invalidRule", "stat", "prog", "expr_rel", "iteracao", "alternativa", 
-		"comando", "teste", "expr"
+		"invalidRule", "prog", "comando", "teste", "iteracao", "expr_rel", "alternativa", 
+		"stat", "expr"
 	};
 
 	public static final boolean[] decisionCanBacktrack = new boolean[] {
@@ -122,11 +122,23 @@ public class GramaticaParser extends DebugParser {
 				int alt1=2;
 				try { dbg.enterDecision(1, decisionCanBacktrack[1]);
 
-				int LA1_0 = input.LA(1);
-				if ( (LA1_0==VAR||LA1_0==23||LA1_0==25) ) {
+				switch ( input.LA(1) ) {
+				case VAR:
+					{
 					alt1=1;
+					}
+					break;
+				case 23:
+					{
+					alt1=1;
+					}
+					break;
+				case 25:
+					{
+					alt1=1;
+					}
+					break;
 				}
-
 				} finally {dbg.exitDecision(1);}
 
 				switch (alt1) {
@@ -337,7 +349,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "teste"
-	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:36:1: teste : ( 'if' expr_rel 'then' stat alternativa ) ;
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:36:1: teste : ( 'if' expr_rel 'then' prog alternativa ) ;
 	public final void teste() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "teste");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -345,16 +357,16 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(36, 0);
 
 		try {
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:37:2: ( ( 'if' expr_rel 'then' stat alternativa ) )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:37:2: ( ( 'if' expr_rel 'then' prog alternativa ) )
 			dbg.enterAlt(1);
 
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:38:2: ( 'if' expr_rel 'then' stat alternativa )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:38:2: ( 'if' expr_rel 'then' prog alternativa )
 			{
 			dbg.location(38,2);
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:38:2: ( 'if' expr_rel 'then' stat alternativa )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:38:2: ( 'if' expr_rel 'then' prog alternativa )
 			dbg.enterAlt(1);
 
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:38:3: 'if' expr_rel 'then' stat alternativa
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:38:3: 'if' expr_rel 'then' prog alternativa
 			{
 			dbg.location(38,3);
 			match(input,23,FOLLOW_23_in_teste114); dbg.location(38,8);
@@ -363,8 +375,8 @@ public class GramaticaParser extends DebugParser {
 			state._fsp--;
 			dbg.location(38,17);
 			match(input,24,FOLLOW_24_in_teste118); dbg.location(38,24);
-			pushFollow(FOLLOW_stat_in_teste120);
-			stat();
+			pushFollow(FOLLOW_prog_in_teste120);
+			prog();
 			state._fsp--;
 			dbg.location(38,29);
 			pushFollow(FOLLOW_alternativa_in_teste122);
@@ -398,7 +410,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "alternativa"
-	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:41:1: alternativa : ( ( 'else' stat ) |);
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:41:1: alternativa : ( ( 'else' prog ) |);
 	public final void alternativa() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "alternativa");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -406,7 +418,7 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(41, 0);
 
 		try {
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:42:2: ( ( 'else' stat ) |)
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:42:2: ( ( 'else' prog ) |)
 			int alt3=2;
 			try { dbg.enterDecision(3, decisionCanBacktrack[3]);
 
@@ -414,7 +426,7 @@ public class GramaticaParser extends DebugParser {
 			if ( (LA3_0==22) ) {
 				alt3=1;
 			}
-			else if ( (LA3_0==EOF||LA3_0==VAR||LA3_0==23||LA3_0==25) ) {
+			else if ( (LA3_0==VAR||LA3_0==23||LA3_0==25) ) {
 				alt3=2;
 			}
 
@@ -431,18 +443,18 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:43:2: ( 'else' stat )
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:43:2: ( 'else' prog )
 					{
 					dbg.location(43,2);
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:43:2: ( 'else' stat )
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:43:2: ( 'else' prog )
 					dbg.enterAlt(1);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:43:3: 'else' stat
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:43:3: 'else' prog
 					{
 					dbg.location(43,3);
 					match(input,22,FOLLOW_22_in_alternativa137); dbg.location(43,10);
-					pushFollow(FOLLOW_stat_in_alternativa139);
-					stat();
+					pushFollow(FOLLOW_prog_in_alternativa139);
+					prog();
 					state._fsp--;
 
 					}
@@ -481,7 +493,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "iteracao"
-	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:46:1: iteracao : ( 'while' expr_rel 'do' stat ) ;
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:46:1: iteracao : ( 'while' expr_rel 'do' prog ) ;
 	public final void iteracao() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "iteracao");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -489,16 +501,16 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(46, 0);
 
 		try {
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:47:2: ( ( 'while' expr_rel 'do' stat ) )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:47:2: ( ( 'while' expr_rel 'do' prog ) )
 			dbg.enterAlt(1);
 
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:48:2: ( 'while' expr_rel 'do' stat )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:48:2: ( 'while' expr_rel 'do' prog )
 			{
 			dbg.location(48,2);
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:48:2: ( 'while' expr_rel 'do' stat )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:48:2: ( 'while' expr_rel 'do' prog )
 			dbg.enterAlt(1);
 
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:48:3: 'while' expr_rel 'do' stat
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:48:3: 'while' expr_rel 'do' prog
 			{
 			dbg.location(48,3);
 			match(input,25,FOLLOW_25_in_iteracao156); dbg.location(48,11);
@@ -507,8 +519,8 @@ public class GramaticaParser extends DebugParser {
 			state._fsp--;
 			dbg.location(48,20);
 			match(input,21,FOLLOW_21_in_iteracao160); dbg.location(48,25);
-			pushFollow(FOLLOW_stat_in_iteracao162);
-			stat();
+			pushFollow(FOLLOW_prog_in_iteracao162);
+			prog();
 			state._fsp--;
 
 			}
@@ -1013,14 +1025,14 @@ public class GramaticaParser extends DebugParser {
 	public static final BitSet FOLLOW_23_in_teste114 = new BitSet(new long[]{0x00000000000000B0L});
 	public static final BitSet FOLLOW_expr_rel_in_teste116 = new BitSet(new long[]{0x0000000001000000L});
 	public static final BitSet FOLLOW_24_in_teste118 = new BitSet(new long[]{0x0000000002800020L});
-	public static final BitSet FOLLOW_stat_in_teste120 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_prog_in_teste120 = new BitSet(new long[]{0x0000000000400000L});
 	public static final BitSet FOLLOW_alternativa_in_teste122 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_22_in_alternativa137 = new BitSet(new long[]{0x0000000002800020L});
-	public static final BitSet FOLLOW_stat_in_alternativa139 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_prog_in_alternativa139 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_25_in_iteracao156 = new BitSet(new long[]{0x00000000000000B0L});
 	public static final BitSet FOLLOW_expr_rel_in_iteracao158 = new BitSet(new long[]{0x0000000000200000L});
 	public static final BitSet FOLLOW_21_in_iteracao160 = new BitSet(new long[]{0x0000000002800020L});
-	public static final BitSet FOLLOW_stat_in_iteracao162 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_prog_in_iteracao162 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_expr_in_expr_rel358 = new BitSet(new long[]{0x00000000001F8000L});
 	public static final BitSet FOLLOW_18_in_expr_rel376 = new BitSet(new long[]{0x00000000000000B0L});
 	public static final BitSet FOLLOW_expr_in_expr_rel385 = new BitSet(new long[]{0x0000000000000002L});
