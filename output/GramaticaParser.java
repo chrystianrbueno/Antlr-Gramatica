@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/Gramatica.g 2021-11-17 10:47:30
+// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/Gramatica.g 2021-11-22 17:36:38
 
     import java.util.HashMap;
 
@@ -50,8 +50,8 @@ public class GramaticaParser extends DebugParser {
 
 
 	public static final String[] ruleNames = new String[] {
-		"invalidRule", "teste", "stat", "expr", "alternativa", "comando", "prog", 
-		"expr_rel", "iteracao"
+		"invalidRule", "stat", "prog", "expr_rel", "iteracao", "alternativa", 
+		"comando", "teste", "expr"
 	};
 
 	public static final boolean[] decisionCanBacktrack = new boolean[] {
@@ -618,96 +618,96 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:55:7: '=' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:56:7: '=' d= expr
 					{
-					dbg.location(55,7);
-					match(input,18,FOLLOW_18_in_expr_rel369); dbg.location(55,12);
-					System.out.println("Expressao Relacional: = identificada");dbg.location(55,76);
-					pushFollow(FOLLOW_expr_in_expr_rel378);
+					dbg.location(56,7);
+					match(input,18,FOLLOW_18_in_expr_rel376); dbg.location(56,12);
+					System.out.println("Expressao Relacional: = identificada");dbg.location(56,76);
+					pushFollow(FOLLOW_expr_in_expr_rel385);
 					d=expr();
 					state._fsp--;
-					dbg.location(55,83);
-					t = e == d;dbg.location(55,104);
+					dbg.location(56,83);
+					t = e == d;dbg.location(56,104);
 					System.out.println("Resultado Expressao Relacional: " + e + " = "  + d + " : " + t);
 					}
 					break;
 				case 2 :
 					dbg.enterAlt(2);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:56:7: '<' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:57:7: '<' d= expr
 					{
-					dbg.location(56,7);
-					match(input,15,FOLLOW_15_in_expr_rel391); dbg.location(56,12);
-					System.out.println("Expressao Relacional: < identificada");dbg.location(56,76);
-					pushFollow(FOLLOW_expr_in_expr_rel400);
+					dbg.location(57,7);
+					match(input,15,FOLLOW_15_in_expr_rel398); dbg.location(57,12);
+					System.out.println("Expressao Relacional: < identificada");dbg.location(57,76);
+					pushFollow(FOLLOW_expr_in_expr_rel407);
 					d=expr();
 					state._fsp--;
-					dbg.location(56,83);
-					t = e <  d;dbg.location(56,104);
+					dbg.location(57,83);
+					t = e <  d;dbg.location(57,104);
 					System.out.println("Resultado Expressao Relacional: " + e + " < "  + d + " : " + t);
 					}
 					break;
 				case 3 :
 					dbg.enterAlt(3);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:57:7: '>' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:58:7: '>' d= expr
 					{
-					dbg.location(57,7);
-					match(input,19,FOLLOW_19_in_expr_rel412); dbg.location(57,12);
-					System.out.println("Expressao Relacional: > identificada");dbg.location(57,76);
-					pushFollow(FOLLOW_expr_in_expr_rel421);
+					dbg.location(58,7);
+					match(input,19,FOLLOW_19_in_expr_rel419); dbg.location(58,12);
+					System.out.println("Expressao Relacional: > identificada");dbg.location(58,76);
+					pushFollow(FOLLOW_expr_in_expr_rel428);
 					d=expr();
 					state._fsp--;
-					dbg.location(57,83);
-					t = e >  d;dbg.location(57,104);
+					dbg.location(58,83);
+					t = e >  d;dbg.location(58,104);
 					System.out.println("Resultado Expressao Relacional: " + e + " > "  + d + " : " + t);
 					}
 					break;
 				case 4 :
 					dbg.enterAlt(4);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:58:7: '>=' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:59:7: '>=' d= expr
 					{
-					dbg.location(58,7);
-					match(input,20,FOLLOW_20_in_expr_rel434); dbg.location(58,12);
-					System.out.println("Expressao Relacional: >= identificada");dbg.location(58,77);
-					pushFollow(FOLLOW_expr_in_expr_rel442);
+					dbg.location(59,7);
+					match(input,20,FOLLOW_20_in_expr_rel441); dbg.location(59,12);
+					System.out.println("Expressao Relacional: >= identificada");dbg.location(59,77);
+					pushFollow(FOLLOW_expr_in_expr_rel449);
 					d=expr();
 					state._fsp--;
-					dbg.location(58,84);
-					t = e >= d;dbg.location(58,105);
+					dbg.location(59,84);
+					t = e >= d;dbg.location(59,105);
 					System.out.println("Resultado Expressao Relacional: " + e + " >= " + d + " : " + t);
 					}
 					break;
 				case 5 :
 					dbg.enterAlt(5);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:59:7: '<=' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:60:7: '<=' d= expr
 					{
-					dbg.location(59,7);
-					match(input,16,FOLLOW_16_in_expr_rel454); dbg.location(59,12);
-					System.out.println("Expressao Relacional: <= identificada");dbg.location(59,77);
-					pushFollow(FOLLOW_expr_in_expr_rel462);
+					dbg.location(60,7);
+					match(input,16,FOLLOW_16_in_expr_rel461); dbg.location(60,12);
+					System.out.println("Expressao Relacional: <= identificada");dbg.location(60,77);
+					pushFollow(FOLLOW_expr_in_expr_rel469);
 					d=expr();
 					state._fsp--;
-					dbg.location(59,84);
-					t = e <= d;dbg.location(59,105);
+					dbg.location(60,84);
+					t = e <= d;dbg.location(60,105);
 					System.out.println("Resultado Expressao Relacional: " + e + " <= " + d + " : " + t);
 					}
 					break;
 				case 6 :
 					dbg.enterAlt(6);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:60:7: '<>' d= expr
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:61:7: '<>' d= expr
 					{
-					dbg.location(60,7);
-					match(input,17,FOLLOW_17_in_expr_rel474); dbg.location(60,12);
-					System.out.println("Expressao Relacional: <> identificada");dbg.location(60,77);
-					pushFollow(FOLLOW_expr_in_expr_rel482);
+					dbg.location(61,7);
+					match(input,17,FOLLOW_17_in_expr_rel481); dbg.location(61,12);
+					System.out.println("Expressao Relacional: <> identificada");dbg.location(61,77);
+					pushFollow(FOLLOW_expr_in_expr_rel489);
 					d=expr();
 					state._fsp--;
-					dbg.location(60,84);
-					t = e != d;dbg.location(60,105);
+					dbg.location(61,84);
+					t = e != d;dbg.location(61,105);
 					System.out.println("Resultado Expressao Relacional: " + e + " <> " + d + " : " + t);
 					}
 					break;
@@ -725,7 +725,7 @@ public class GramaticaParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(62, 4);
+		dbg.location(63, 4);
 
 		}
 		finally {
@@ -741,7 +741,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "expr"
-	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:63:1: expr returns [ double v ] : ( ( INT | VAR ) ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr |) | '(' e= expr ')' );
+	// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:64:1: expr returns [ double v ] : ( ( INT | VAR ) ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr |) | '(' e= expr ')' );
 	public final double expr() throws RecognitionException {
 		double v = 0.0;
 
@@ -753,10 +753,10 @@ public class GramaticaParser extends DebugParser {
 		try { dbg.enterRule(getGrammarFileName(), "expr");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(63, 0);
+		dbg.location(64, 0);
 
 		try {
-			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:64:2: ( ( INT | VAR ) ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr |) | '(' e= expr ')' )
+			// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:65:2: ( ( INT | VAR ) ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr |) | '(' e= expr ')' )
 			int alt7=2;
 			try { dbg.enterDecision(7, decisionCanBacktrack[7]);
 
@@ -781,10 +781,10 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:65:2: ( INT | VAR ) ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr |)
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:66:2: ( INT | VAR ) ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr |)
 					{
-					dbg.location(65,2);
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:65:2: ( INT | VAR )
+					dbg.location(66,2);
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:66:2: ( INT | VAR )
 					int alt5=2;
 					try { dbg.enterSubRule(5);
 					try { dbg.enterDecision(5, decisionCanBacktrack[5]);
@@ -810,30 +810,30 @@ public class GramaticaParser extends DebugParser {
 						case 1 :
 							dbg.enterAlt(1);
 
-							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:66:4: INT
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:67:4: INT
 							{
-							dbg.location(66,4);
-							INT3=(Token)match(input,INT,FOLLOW_INT_in_expr519); dbg.location(66,8);
-							 v = Double.parseDouble( (INT3!=null?INT3.getText():null));dbg.location(66,48);
-							System.out.println("Valor encontrado na expressão: " + v);
+							dbg.location(67,4);
+							INT3=(Token)match(input,INT,FOLLOW_INT_in_expr526); dbg.location(67,8);
+							 v = Double.parseDouble( (INT3!=null?INT3.getText():null));dbg.location(67,48);
+							System.out.println("Valor encontrado na Expressão: " + v);
 							}
 							break;
 						case 2 :
 							dbg.enterAlt(2);
 
-							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:67:7: VAR
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:68:7: VAR
 							{
-							dbg.location(67,7);
-							VAR4=(Token)match(input,VAR,FOLLOW_VAR_in_expr531); dbg.location(67,11);
-							 v = memory.getOrDefault((VAR4!=null?VAR4.getText():null), 0.0); dbg.location(67,57);
+							dbg.location(68,7);
+							VAR4=(Token)match(input,VAR,FOLLOW_VAR_in_expr538); dbg.location(68,11);
+							 v = memory.getOrDefault((VAR4!=null?VAR4.getText():null), 0.0); dbg.location(68,57);
 							System.out.println("Variável "+ (VAR4!=null?VAR4.getText():null) +" valor lido da lista: " + v);
 							}
 							break;
 
 					}
 					} finally {dbg.exitSubRule(5);}
-					dbg.location(68,2);
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:68:2: ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr |)
+					dbg.location(69,2);
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:69:2: ( '-' e= expr | '+' e= expr | '/' e= expr | '*' e= expr |)
 					int alt6=5;
 					try { dbg.enterSubRule(6);
 					try { dbg.enterDecision(6, decisionCanBacktrack[6]);
@@ -885,71 +885,71 @@ public class GramaticaParser extends DebugParser {
 						case 1 :
 							dbg.enterAlt(1);
 
-							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:69:4: '-' e= expr
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:70:4: '-' e= expr
 							{
-							dbg.location(69,4);
-							match(input,11,FOLLOW_11_in_expr545); dbg.location(69,8);
-							System.out.println("Sinal '-' encontrado");dbg.location(69,56);
-							pushFollow(FOLLOW_expr_in_expr553);
+							dbg.location(70,4);
+							match(input,11,FOLLOW_11_in_expr552); dbg.location(70,8);
+							System.out.println("Sinal '-' encontrado");dbg.location(70,56);
+							pushFollow(FOLLOW_expr_in_expr560);
 							e=expr();
 							state._fsp--;
-							dbg.location(69,63);
-							v -= e;dbg.location(69,77);
+							dbg.location(70,63);
+							v -= e;dbg.location(70,77);
 							System.out.println("Resultado Subtração: " + v);
 							}
 							break;
 						case 2 :
 							dbg.enterAlt(2);
 
-							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:70:4: '+' e= expr
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:71:4: '+' e= expr
 							{
-							dbg.location(70,4);
-							match(input,10,FOLLOW_10_in_expr562); dbg.location(70,8);
-							System.out.println("Sinal '+' encontrado");dbg.location(70,56);
-							pushFollow(FOLLOW_expr_in_expr570);
+							dbg.location(71,4);
+							match(input,10,FOLLOW_10_in_expr569); dbg.location(71,8);
+							System.out.println("Sinal '+' encontrado");dbg.location(71,56);
+							pushFollow(FOLLOW_expr_in_expr577);
 							e=expr();
 							state._fsp--;
-							dbg.location(70,63);
-							v += e;dbg.location(70,77);
+							dbg.location(71,63);
+							v += e;dbg.location(71,77);
 							System.out.println("Resultado Soma: " + v);
 							}
 							break;
 						case 3 :
 							dbg.enterAlt(3);
 
-							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:71:4: '/' e= expr
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:72:4: '/' e= expr
 							{
-							dbg.location(71,4);
-							match(input,12,FOLLOW_12_in_expr579); dbg.location(71,8);
-							System.out.println("Sinal '/' encontrado");dbg.location(71,56);
-							pushFollow(FOLLOW_expr_in_expr587);
+							dbg.location(72,4);
+							match(input,12,FOLLOW_12_in_expr586); dbg.location(72,8);
+							System.out.println("Sinal '/' encontrado");dbg.location(72,56);
+							pushFollow(FOLLOW_expr_in_expr594);
 							e=expr();
 							state._fsp--;
-							dbg.location(71,63);
-							v /= e;dbg.location(71,77);
+							dbg.location(72,63);
+							v /= e;dbg.location(72,77);
 							System.out.println("Resultado Divisão: " + v);
 							}
 							break;
 						case 4 :
 							dbg.enterAlt(4);
 
-							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:72:4: '*' e= expr
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:73:4: '*' e= expr
 							{
-							dbg.location(72,4);
-							match(input,9,FOLLOW_9_in_expr596); dbg.location(72,8);
-							System.out.println("Sinal '*' encontrado");dbg.location(72,56);
-							pushFollow(FOLLOW_expr_in_expr604);
+							dbg.location(73,4);
+							match(input,9,FOLLOW_9_in_expr603); dbg.location(73,8);
+							System.out.println("Sinal '*' encontrado");dbg.location(73,56);
+							pushFollow(FOLLOW_expr_in_expr611);
 							e=expr();
 							state._fsp--;
-							dbg.location(72,63);
-							v *= e;dbg.location(72,77);
+							dbg.location(73,63);
+							v *= e;dbg.location(73,77);
 							System.out.println("Resultado Multiplicação: " + v);
 							}
 							break;
 						case 5 :
 							dbg.enterAlt(5);
 
-							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:74:2: 
+							// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:75:2: 
 							{
 							}
 							break;
@@ -962,16 +962,16 @@ public class GramaticaParser extends DebugParser {
 				case 2 :
 					dbg.enterAlt(2);
 
-					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:75:7: '(' e= expr ')'
+					// /home/chrystian/Downloads/TrabalhoGB/Gramatica.g:76:7: '(' e= expr ')'
 					{
-					dbg.location(75,7);
-					match(input,7,FOLLOW_7_in_expr625); dbg.location(75,13);
-					pushFollow(FOLLOW_expr_in_expr631);
+					dbg.location(76,7);
+					match(input,7,FOLLOW_7_in_expr632); dbg.location(76,13);
+					pushFollow(FOLLOW_expr_in_expr638);
 					e=expr();
 					state._fsp--;
-					dbg.location(75,20);
-					v = e;dbg.location(75,33);
-					match(input,8,FOLLOW_8_in_expr635); dbg.location(75,37);
+					dbg.location(76,20);
+					v = e;dbg.location(76,33);
+					match(input,8,FOLLOW_8_in_expr642); dbg.location(76,37);
 					System.out.println("Expressão com '()' encontrado, prioridade na expressão");
 					}
 					break;
@@ -985,7 +985,7 @@ public class GramaticaParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(82, 4);
+		dbg.location(83, 4);
 
 		}
 		finally {
@@ -1022,29 +1022,29 @@ public class GramaticaParser extends DebugParser {
 	public static final BitSet FOLLOW_21_in_iteracao160 = new BitSet(new long[]{0x0000000002800020L});
 	public static final BitSet FOLLOW_stat_in_iteracao162 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_expr_in_expr_rel358 = new BitSet(new long[]{0x00000000001F8000L});
-	public static final BitSet FOLLOW_18_in_expr_rel369 = new BitSet(new long[]{0x00000000000000B0L});
-	public static final BitSet FOLLOW_expr_in_expr_rel378 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_15_in_expr_rel391 = new BitSet(new long[]{0x00000000000000B0L});
-	public static final BitSet FOLLOW_expr_in_expr_rel400 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_19_in_expr_rel412 = new BitSet(new long[]{0x00000000000000B0L});
-	public static final BitSet FOLLOW_expr_in_expr_rel421 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_20_in_expr_rel434 = new BitSet(new long[]{0x00000000000000B0L});
-	public static final BitSet FOLLOW_expr_in_expr_rel442 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_16_in_expr_rel454 = new BitSet(new long[]{0x00000000000000B0L});
-	public static final BitSet FOLLOW_expr_in_expr_rel462 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_17_in_expr_rel474 = new BitSet(new long[]{0x00000000000000B0L});
-	public static final BitSet FOLLOW_expr_in_expr_rel482 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INT_in_expr519 = new BitSet(new long[]{0x0000000000001E02L});
-	public static final BitSet FOLLOW_VAR_in_expr531 = new BitSet(new long[]{0x0000000000001E02L});
-	public static final BitSet FOLLOW_11_in_expr545 = new BitSet(new long[]{0x00000000000000B0L});
-	public static final BitSet FOLLOW_expr_in_expr553 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_10_in_expr562 = new BitSet(new long[]{0x00000000000000B0L});
-	public static final BitSet FOLLOW_expr_in_expr570 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_12_in_expr579 = new BitSet(new long[]{0x00000000000000B0L});
-	public static final BitSet FOLLOW_expr_in_expr587 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_9_in_expr596 = new BitSet(new long[]{0x00000000000000B0L});
-	public static final BitSet FOLLOW_expr_in_expr604 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_7_in_expr625 = new BitSet(new long[]{0x00000000000000B0L});
-	public static final BitSet FOLLOW_expr_in_expr631 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_8_in_expr635 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_18_in_expr_rel376 = new BitSet(new long[]{0x00000000000000B0L});
+	public static final BitSet FOLLOW_expr_in_expr_rel385 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_15_in_expr_rel398 = new BitSet(new long[]{0x00000000000000B0L});
+	public static final BitSet FOLLOW_expr_in_expr_rel407 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_19_in_expr_rel419 = new BitSet(new long[]{0x00000000000000B0L});
+	public static final BitSet FOLLOW_expr_in_expr_rel428 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_20_in_expr_rel441 = new BitSet(new long[]{0x00000000000000B0L});
+	public static final BitSet FOLLOW_expr_in_expr_rel449 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_16_in_expr_rel461 = new BitSet(new long[]{0x00000000000000B0L});
+	public static final BitSet FOLLOW_expr_in_expr_rel469 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_17_in_expr_rel481 = new BitSet(new long[]{0x00000000000000B0L});
+	public static final BitSet FOLLOW_expr_in_expr_rel489 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INT_in_expr526 = new BitSet(new long[]{0x0000000000001E02L});
+	public static final BitSet FOLLOW_VAR_in_expr538 = new BitSet(new long[]{0x0000000000001E02L});
+	public static final BitSet FOLLOW_11_in_expr552 = new BitSet(new long[]{0x00000000000000B0L});
+	public static final BitSet FOLLOW_expr_in_expr560 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_10_in_expr569 = new BitSet(new long[]{0x00000000000000B0L});
+	public static final BitSet FOLLOW_expr_in_expr577 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_12_in_expr586 = new BitSet(new long[]{0x00000000000000B0L});
+	public static final BitSet FOLLOW_expr_in_expr594 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_9_in_expr603 = new BitSet(new long[]{0x00000000000000B0L});
+	public static final BitSet FOLLOW_expr_in_expr611 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_7_in_expr632 = new BitSet(new long[]{0x00000000000000B0L});
+	public static final BitSet FOLLOW_expr_in_expr638 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_8_in_expr642 = new BitSet(new long[]{0x0000000000000002L});
 }
