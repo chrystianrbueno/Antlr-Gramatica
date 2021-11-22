@@ -14,9 +14,14 @@ options {
 
 prog
 	:
-	stat+
+	stat
 	;
 stat
+	:	
+	comandos+	
+	;
+	
+comandos
 	:	
 	(
 	  comando';'
@@ -35,17 +40,17 @@ comando
 
 teste
 	:
-	('if' expr_rel 'then' prog alternativa) 
+	('if' expr_rel 'then' stat alternativa) 
 	;
 
 alternativa
 	:
-	('else' prog)	
+	('else' stat)	
 	|
 	;
 iteracao
 	:
-	('while' expr_rel 'do' prog)
+	('while' expr_rel 'do' stat)
 	;
 																																																																																																																																																																					
 
