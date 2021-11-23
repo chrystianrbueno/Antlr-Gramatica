@@ -1,15 +1,15 @@
-b := 4 /(2+3);
-aAaA := b + c * 1;
-if a=1 then
-aAaAccA:=0;
-aAaAddB:=0;
-aAaAABBCCCcee:=0;
-if b=0 then
-aAaAAAee:=0;
-aAaAABBewe:=0;
-aAaAABBCCCc:=0;
+varB := 4 /(2+3);
+varA := b + c * 1;
+
+if varA = 1 then
+varC := 12;
+varD := 41;
+
+if novaVariavel = 12 then
+varAaA := 13;
+
 else 
-b:=1;
-aAaAAAasd:=0;
-aAaAABBzcxv:=0;
-aAaAABBCCCc:=0;
+varAaA := 31;
+varB := 44;
+varC:= 41;
+varD:= 33;

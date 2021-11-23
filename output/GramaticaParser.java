@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/Gramatica.g 2021-11-22 18:36:32
+// $ANTLR 3.5.1 /home/chrystian/Downloads/TrabalhoGB/Gramatica.g 2021-11-22 21:54:03
 
     import java.util.HashMap;
 
@@ -50,8 +50,8 @@ public class GramaticaParser extends DebugParser {
 
 
 	public static final String[] ruleNames = new String[] {
-		"invalidRule", "expr_rel", "comandos", "alternativa", "prog", "teste", 
-		"comando", "stat", "iteracao", "expr"
+		"invalidRule", "prog", "comando", "stat", "teste", "expr_rel", "comandos", 
+		"iteracao", "expr", "alternativa"
 	};
 
 	public static final boolean[] decisionCanBacktrack = new boolean[] {
